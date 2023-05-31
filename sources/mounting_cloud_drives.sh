@@ -37,6 +37,18 @@ mount_cloud_drive () {
     fi
 }
 
+mount_sshfs_cloud_drive () {
+    local remote="$1"
+    local mount_location="$2"
+    if mountpoint -q "$mount_location"; then
+        return 0
+        # echo "The mount point is already mounted: $mount_location"
+    else
+        mkdir -p "$mount_location"
+        sshfs "$remote" "$mount_location" -o reconnect
+    fi
+}
+
 unmount_cloud_drive () {
     # Force unmount:
     # The umount operation may fail, for example when the mount point is busy. When that happens, you can stop the mount manually using command:
@@ -50,6 +62,8 @@ unmount_all_cloud_drives () {
     unmount_cloud_drive "${CLOUD_BASE_PATH}/GDrive_Diba_Shared"
     unmount_cloud_drive "${CLOUD_BASE_PATH}/Dropbox_Diba_Shared"
     unmount_cloud_drive "${CLOUD_BASE_PATH}/Dropbox_Personal"
+    unmount_cloud_drive "${CLOUD_BASE_PATH}/turbo"
+    unmount_cloud_drive "${CLOUD_BASE_PATH}/greatlakes"
 }
 
 
@@ -60,5 +74,18 @@ mount_all_cloud_drives () {
     mount_cloud_drive "Diba_Lab_UMich_Dropbox:" "${CLOUD_BASE_PATH}/Dropbox_Diba_Shared" "${CLOUD_BASE_PATH}/logs/rclone_deamon_Dropbox_Diba_Shared.log"
     # Personal Dropbox:
     mount_cloud_drive "Pho_Personal_Dropbox:" "${CLOUD_BASE_PATH}/Dropbox_Personal" "${CLOUD_BASE_PATH}/logs/rclone_deamon_Dropbox_Personal.log"
+    # # Turbo via Greatlakes:
+    # mount_sshfs_cloud_drive "halechr@greatlakes.arc-ts.umich.edu:/nfs/turbo/umms-kdiba/" "${CLOUD_BASE_PATH}/turbo"
+    # # Greatlakes:
+    # mount_sshfs_cloud_drive "halechr@greatlakes.arc-ts.umich.edu:" "${CLOUD_BASE_PATH}/greatlakes"
 }
 
+mount_turbo () {
+    # Turbo via Greatlakes:
+    mount_sshfs_cloud_drive "halechr@greatlakes.arc-ts.umich.edu:/nfs/turbo/umms-kdiba/" "${CLOUD_BASE_PATH}/turbo"
+}
+
+mount_greatlakes () {
+    # Greatlakes:
+    mount_sshfs_cloud_drive "halechr@greatlakes.arc-ts.umich.edu:" "${CLOUD_BASE_PATH}/greatlakes"
+}
