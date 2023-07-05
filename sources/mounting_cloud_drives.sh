@@ -67,6 +67,15 @@ unmount_all_cloud_drives () {
 }
 
 
+# Shorcuts for remounting individual cloud drives:
+remount_cloud_drive_PhoPersonalDropbox () {
+    local CLOUD_BASE_PATH=${1:-"/media/MAX/cloud"} # Provides a default value if no argument is passed
+    unmount_cloud_drive "${CLOUD_BASE_PATH}/Dropbox_Personal"
+    mount_cloud_drive "Pho_Personal_Dropbox:" "${CLOUD_BASE_PATH}/Dropbox_Personal" "${CLOUD_BASE_PATH}/logs/rclone_deamon_Dropbox_Personal.log"
+    is_cloud_drive_mounted "Pho_Personal_Dropbox:" "${CLOUD_BASE_PATH}/Dropbox_Personal"
+}
+
+
 mount_all_cloud_drives () {
     local CLOUD_BASE_PATH=${1:-"/media/MAX/cloud"} # Provides a default value if no argument is passed
     # Mount Cloud Drives:

@@ -33,5 +33,6 @@ function unlock-keyring ()
 
 
 function cryptomator () {
-    ./home/halechr/bin/cryptomator-1.8.0-x86_64.AppImage
+    # ./home/halechr/bin/cryptomator should be a symbolic link pointing to an AppImage in the versions folder like ./home/halechr/bin/versions/cryptomator-1.8.0-x86_64.AppImage
+    ./home/halechr/bin/cryptomator
 }
