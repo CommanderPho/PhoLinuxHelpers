@@ -1,3 +1,6 @@
+""" TODO 2023-07-05 - Close to working. Wraps the cloud drive mounting shell script in python and creates a basic GUI to show the mounts.
+"""
+
 import subprocess
 import tkinter as tk
 from functools import partial
