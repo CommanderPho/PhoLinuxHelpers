@@ -19,9 +19,6 @@ list_all_rclone_processes () {
     ps aux | grep rclone
 }
 
-function ssh_supercomputer () {
-    ssh halechr@greatlakes.arc-ts.umich.edu
-}
 
 # Linux unlock gnome keyring
 function unlock-keyring ()

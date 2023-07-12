@@ -56,15 +56,7 @@ unmount_cloud_drive () {
     fusermount -u "$mount_location"
 }
 
-unmount_all_cloud_drives () {
-    local CLOUD_BASE_PATH=${1:-"/media/MAX/cloud"} # Provides a default value if no argument is passed
-    # Unmount Cloud Drives:
-    unmount_cloud_drive "${CLOUD_BASE_PATH}/GDrive_Diba_Shared"
-    unmount_cloud_drive "${CLOUD_BASE_PATH}/Dropbox_Diba_Shared"
-    unmount_cloud_drive "${CLOUD_BASE_PATH}/Dropbox_Personal"
-    unmount_cloud_drive "${CLOUD_BASE_PATH}/turbo"
-    unmount_cloud_drive "${CLOUD_BASE_PATH}/greatlakes"
-}
+
 
 
 # Shorcuts for remounting individual cloud drives:
@@ -73,6 +65,20 @@ remount_cloud_drive_PhoPersonalDropbox () {
     unmount_cloud_drive "${CLOUD_BASE_PATH}/Dropbox_Personal"
     mount_cloud_drive "Pho_Personal_Dropbox:" "${CLOUD_BASE_PATH}/Dropbox_Personal" "${CLOUD_BASE_PATH}/logs/rclone_deamon_Dropbox_Personal.log"
     is_cloud_drive_mounted "Pho_Personal_Dropbox:" "${CLOUD_BASE_PATH}/Dropbox_Personal"
+}
+
+mount_turbo () {
+    # Turbo via Greatlakes:
+    mount_sshfs_cloud_drive "halechr@greatlakes.arc-ts.umich.edu:/nfs/turbo/umms-kdiba/" "${CLOUD_BASE_PATH}/turbo"
+    echo turbo mounted at "${CLOUD_BASE_PATH}/turbo"
+    return 0
+}
+
+mount_greatlakes () {
+    # Greatlakes:
+    mount_sshfs_cloud_drive "halechr@greatlakes.arc-ts.umich.edu:" "${CLOUD_BASE_PATH}/greatlakes"
+    echo turbo mounted at "${CLOUD_BASE_PATH}/greatlakes"
+    return 0
 }
 
 
@@ -89,12 +95,12 @@ mount_all_cloud_drives () {
     # mount_sshfs_cloud_drive "halechr@greatlakes.arc-ts.umich.edu:" "${CLOUD_BASE_PATH}/greatlakes"
 }
 
-mount_turbo () {
-    # Turbo via Greatlakes:
-    mount_sshfs_cloud_drive "halechr@greatlakes.arc-ts.umich.edu:/nfs/turbo/umms-kdiba/" "${CLOUD_BASE_PATH}/turbo"
-}
-
-mount_greatlakes () {
-    # Greatlakes:
-    mount_sshfs_cloud_drive "halechr@greatlakes.arc-ts.umich.edu:" "${CLOUD_BASE_PATH}/greatlakes"
+unmount_all_cloud_drives () {
+    local CLOUD_BASE_PATH=${1:-"/media/MAX/cloud"} # Provides a default value if no argument is passed
+    # Unmount Cloud Drives:
+    unmount_cloud_drive "${CLOUD_BASE_PATH}/GDrive_Diba_Shared"
+    unmount_cloud_drive "${CLOUD_BASE_PATH}/Dropbox_Diba_Shared"
+    unmount_cloud_drive "${CLOUD_BASE_PATH}/Dropbox_Personal"
+    unmount_cloud_drive "${CLOUD_BASE_PATH}/turbo"
+    unmount_cloud_drive "${CLOUD_BASE_PATH}/greatlakes"
 }
