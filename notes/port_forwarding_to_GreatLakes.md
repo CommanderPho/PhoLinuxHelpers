@@ -33,6 +33,9 @@ vnc_port=63967
 ssh -f -N -L "${vnc_port}":"${great_lakes_node_name}".arc-ts.umich.edu:5902 -L 8889:"${great_lakes_node_name}".arc-ts.umich.edu:8889 halechr@gl-campus-login.arc-ts.umich.edu # Forwards port 5902 on the remote machine to port "${vnc_port}" on local
 # Forwards port 8889 on remote to 8889 on local (for jupyter-lab)
 
+ssh -f -N -L 63967:gl0005.arc-ts.umich.edu:5902 -L 8889:gl0005.arc-ts.umich.edu:8889 halechr@gl-campus-login.arc-ts.umich.edu # Forwards port 5902 on the remote machine to port 26998 on local
+
+
 
 # On Greatlakes:
 ```bash
