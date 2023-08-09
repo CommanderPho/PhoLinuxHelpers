@@ -28,6 +28,16 @@ restore_dnf_list() {
   echo "Restoration completed."
 }
 
+
+backup_dnf_history() {
+  TODAYS_DATE=$(date +%Y%m%d)
+  BACKUP_FILE="dnf_history_backup_${TODAYS_DATE}.txt"
+  echo "Backing up the DNF history to ${BACKUP_FILE}..."
+  sudo dnf history list > "${BACKUP_FILE}"
+  echo "Backup completed."
+}
+
+
 # Example usage
 # backup_dnf_list
 # restore_dnf_list "dnf_list_backup_20230809.txt"
