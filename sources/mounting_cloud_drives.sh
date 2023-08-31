@@ -2,8 +2,15 @@
 
 # Set the base path for cloud drives:
 # Uncomment one of the following lines to choose the base path.
-CLOUD_BASE_PATH="/media/MAX/cloud"
+# CLOUD_BASE_PATH="/media/MAX/cloud"
 # CLOUD_BASE_PATH="${HOME}/cloud"
+
+if [ -z "$CLOUD_BASE_PATH" ]; then
+#   export CLOUD_BASE_PATH="/media/MAX/cloud"
+    export CLOUD_BASE_PATH="${HOME}/cloud" # for greatlakes
+fi
+
+# make sure it exists:
 mkdir -p "${CLOUD_BASE_PATH}"
 
 # ps aux | grep rclone
