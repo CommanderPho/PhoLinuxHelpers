@@ -1,4 +1,5 @@
 https://www.reddit.com/r/kde/comments/qr18sn/ui_scaling_is_too_large_in_x11_vs_wayland/
+#fix #working #workaround
 
 
 ```
