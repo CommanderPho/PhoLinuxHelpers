@@ -5,6 +5,18 @@
 # CLOUD_BASE_PATH="/media/MAX/cloud"
 # CLOUD_BASE_PATH="${HOME}/cloud"
 
+CLOUD_SSD_BASE_PATH="${HOME}/cloud" # the mount attached to the SSD
+if [ -z "$CLOUD_SSD_BASE_PATH" ]; then
+    export CLOUD_SSD_BASE_PATH="${HOME}/cloud" # for greatlakes
+fi
+# make sure it exists:
+mkdir -p "${CLOUD_SSD_BASE_PATH}"
+# ps aux | grep rclone
+rclone_ssd_deamon_log_file_path="${CLOUD_SSD_BASE_PATH}/logs"
+mkdir -p "$rclone_ssd_deamon_log_file_path"
+
+
+
 if [ -z "$CLOUD_BASE_PATH" ]; then
 #   export CLOUD_BASE_PATH="/media/MAX/cloud"
     export CLOUD_BASE_PATH="${HOME}/cloud" # for greatlakes
@@ -76,8 +88,15 @@ remount_cloud_drive_PhoPersonalDropbox () {
 
 mount_turbo () {
     # Turbo via Greatlakes:
-    mount_sshfs_cloud_drive "halechr@greatlakes.arc-ts.umich.edu:/nfs/turbo/umms-kdiba/" "${CLOUD_BASE_PATH}/turbo"
-    echo turbo mounted at "${CLOUD_BASE_PATH}/turbo"
+    mount_sshfs_cloud_drive "halechr@greatlakes.arc-ts.umich.edu:/nfs/turbo/umms-kdiba/" "${CLOUD_SSD_BASE_PATH}/turbo"
+    echo turbo mounted at "${CLOUD_SSD_BASE_PATH}/turbo"
+    return 0
+}
+
+mount_locker_dataDen () {
+    # Locker DataDen via Greatlakes:
+    mount_sshfs_cloud_drive "halechr@greatlakes-oncampus.arc-ts.umich.edu:/nfs/dataden/umms-dibalab" "${CLOUD_SSD_BASE_PATH}/locker_dataDen"
+    echo locker_dataDen mounted at "${CLOUD_SSD_BASE_PATH}/locker_dataDen via ssh through greatlakes"
     return 0
 }
 
@@ -110,4 +129,5 @@ unmount_all_cloud_drives () {
     unmount_cloud_drive "${CLOUD_BASE_PATH}/Dropbox_Personal"
     unmount_cloud_drive "${CLOUD_BASE_PATH}/turbo"
     unmount_cloud_drive "${CLOUD_BASE_PATH}/greatlakes"
+    unmount_cloud_drive "${CLOUD_BASE_PATH}/locker_dataDen"
 }
