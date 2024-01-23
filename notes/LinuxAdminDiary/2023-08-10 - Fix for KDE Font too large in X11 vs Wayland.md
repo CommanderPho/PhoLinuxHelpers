@@ -18,3 +18,7 @@ Modify `/etc/sddm.conf`
 ServerArguments=-dpi 96 
 ```
 
+
+# Ubuntu with KDE:
+Just go to System Settings > Application Appearance > Fonts, and manually enter the dpi value you would like. 
+
