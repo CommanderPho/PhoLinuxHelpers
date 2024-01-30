@@ -1,0 +1,3 @@
+[submodule "sources/external/transfuse"]
+	path = sources/external/transfuse
+	url = https://gitlab.com/CommanderPho1/transfuse.git
