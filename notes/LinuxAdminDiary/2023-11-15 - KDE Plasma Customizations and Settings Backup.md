@@ -17,3 +17,8 @@ https://gitlab.com/cscs/transfuse
     - endorsed by several
 
     
+
+# 2024-01-23 - In the end I used `transfuse`
+
+
+Restoring is surprising: `./transfuse.sh --restore halechr`
