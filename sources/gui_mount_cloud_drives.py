@@ -6,7 +6,7 @@ import tkinter as tk
 from functools import partial
 from tkinter import ttk
 
-CLOUD_BASE_PATH = "/media/MAX/cloud"
+CLOUD_BASE_PATH = "/media/halechr/MAX/cloud"
 
 def is_cloud_drive_mounted(remote, mount_location):
     result = subprocess.run(["mountpoint", "-q", mount_location], capture_output=True)

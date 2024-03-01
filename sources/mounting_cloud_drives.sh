@@ -2,7 +2,7 @@
 
 # Set the base path for cloud drives:
 # Uncomment one of the following lines to choose the base path.
-# CLOUD_BASE_PATH="/media/MAX/cloud"
+# CLOUD_BASE_PATH="/media/halechr/MAX/cloud"
 # CLOUD_BASE_PATH="${HOME}/cloud"
 
 CLOUD_SSD_BASE_PATH="${HOME}/cloud" # the mount attached to the SSD
@@ -18,7 +18,7 @@ mkdir -p "$rclone_ssd_deamon_log_file_path"
 
 
 if [ -z "$CLOUD_BASE_PATH" ]; then
-#   export CLOUD_BASE_PATH="/media/MAX/cloud"
+#   export CLOUD_BASE_PATH="/media/halechr/MAX/cloud"
     export CLOUD_BASE_PATH="${HOME}/cloud" # for greatlakes
 fi
 
@@ -80,7 +80,7 @@ unmount_cloud_drive () {
 
 # Shorcuts for remounting individual cloud drives:
 remount_cloud_drive_PhoPersonalDropbox () {
-    local CLOUD_BASE_PATH=${1:-"/media/MAX/cloud"} # Provides a default value if no argument is passed
+    local CLOUD_BASE_PATH=${1:-"/media/halechr/MAX/cloud"} # Provides a default value if no argument is passed
     unmount_cloud_drive "${CLOUD_BASE_PATH}/Dropbox_Personal"
     mount_cloud_drive "Pho_Personal_Dropbox:" "${CLOUD_BASE_PATH}/Dropbox_Personal" "${CLOUD_BASE_PATH}/logs/rclone_deamon_Dropbox_Personal.log"
     is_cloud_drive_mounted "Pho_Personal_Dropbox:" "${CLOUD_BASE_PATH}/Dropbox_Personal"
@@ -109,7 +109,7 @@ mount_greatlakes () {
 
 
 mount_all_cloud_drives () {
-    local CLOUD_BASE_PATH=${1:-"/media/MAX/cloud"} # Provides a default value if no argument is passed
+    local CLOUD_BASE_PATH=${1:-"/media/halechr/MAX/cloud"} # Provides a default value if no argument is passed
     # Mount Cloud Drives:
     mount_cloud_drive "Diba_Lab_Shared_GDrive:" "${CLOUD_BASE_PATH}/GDrive_Diba_Shared" "${CLOUD_BASE_PATH}/logs/rclone_deamon_GDrive_Diba_Shared.log"
     mount_cloud_drive "Diba_Lab_UMich_Dropbox:" "${CLOUD_BASE_PATH}/Dropbox_Diba_Shared" "${CLOUD_BASE_PATH}/logs/rclone_deamon_Dropbox_Diba_Shared.log"
@@ -122,7 +122,7 @@ mount_all_cloud_drives () {
 }
 
 unmount_all_cloud_drives () {
-    local CLOUD_BASE_PATH=${1:-"/media/MAX/cloud"} # Provides a default value if no argument is passed
+    local CLOUD_BASE_PATH=${1:-"/media/halechr/MAX/cloud"} # Provides a default value if no argument is passed
     # Unmount Cloud Drives:
     unmount_cloud_drive "${CLOUD_BASE_PATH}/GDrive_Diba_Shared"
     unmount_cloud_drive "${CLOUD_BASE_PATH}/Dropbox_Diba_Shared"

@@ -8,10 +8,10 @@ function move_folder_to_external_drive() {
     local folder_path=$1
 
     # move the folder to the external drive
-    mv "$folder_path" /media/MAX/SlowSwap/
+    mv "$folder_path" /media/halechr/MAX/SlowSwap/
 
     # create a symbolic link to the new location
-    ln -s /media/MAX/SlowSwap/"$(basename "$folder_path")" "$folder_path"
+    ln -s /media/halechr/MAX/SlowSwap/"$(basename "$folder_path")" "$folder_path"
 }
 
 
