@@ -1,0 +1,1000 @@
+ 1009  ls
+ 1010  cmake .. -DENABLE_CXX11=ON -DCUDA_PROPAGATE_HOST_FLAGS=off
+ 1011  make
+ 1012  cmake .. -DENABLE_CXX11=ON
+ 1013  make
+ 1014  make clean
+ 1015  cmake .. -DENABLE_CXX11=ON
+ 1016  make
+ 1017  sudo make install
+ 1018  make
+ 1019  sudo apt-get install libpng-dev
+ 1020  sudo -i
+ 1021  cd repos/
+ 1022  ls
+ 1023  cd External/
+ 1024  ls
+ 1025  mv catkin_ws ~/
+ 1026  cd ~/catkin_ws/
+ 1027  ls
+ 1028  roslaunch kinect2_bridge kinect2_bridge.launch
+ 1029  printenv | grep ROS
+ 1030  history
+ 1031  code /home/halechr/.bashrc 
+ 1032  source /opt/ros/noetic/setup.bash
+ 1033  sudo apt-get install python-rosinstall
+ 1034  sudo apt install ros-noetic-desktop-full
+ 1035  cd src/iai_kinect2/
+ 1036  rosdep install -r --from-paths .
+ 1037  cd ~/catkin_ws
+ 1038  catkin_make -DCMAKE_BUILD_TYPE="Release"
+ 1039  ls
+ 1040  rm -rf build/
+ 1041  catkin_make -DCMAKE_BUILD_TYPE="Release"
+ 1042  sudo apt-get install python3-rosinstall
+ 1043  sudo apt-get install python3-pyem
+ 1044  sudo apt-get install python3-em
+ 1045  which python
+ 1046  roslaunch kinect2_bridge kinect2_bridge.launch
+ 1047  catkin_make -DPYTHON_EXECUTABLE=/usr/bin/python3
+ 1048  pyenv local /usr/bin/python3
+ 1049  pyenv
+ 1050  pyenv rehash
+ 1051  pyenv versions
+ 1052  pyenv virtualenv /usr/bin/python3
+ 1053  pyenv deactivate
+ 1054  which python
+ 1055  pyenv prefix
+ 1056  pyenv version-origin
+ 1057  pyenv versions
+ 1058  pyenv local
+ 1059  pyenv local system
+ 1060  pyenv local
+ 1061  pyenv which python
+ 1062  pyenv local /usr/bin/python3
+ 1063  /usr/bin/python3
+ 1064  catkin_make
+ 1065  pyenv install 3.8.10
+ 1066  pyenv local 3.8.10
+ 1067  pyenv
+ 1068  pyenv activate
+ 1069  matlab
+ 1070  cd usr/local/
+ 1071  ls
+ 1072  cd bin/
+ 1073  ls
+ 1074  cd ../
+ 1075  cd etc
+ 1076  ls
+ 1077  locate MATLAB
+ 1078  cd /home/halechr/bin/MATLAB
+ 1079  ./activate_matlab.sh 
+ 1080  ./matlab
+ 1081  /home/halechr/.pyenv/versions/3.9.13/bin/python /home/halechr/Library/VSCode/explicit_for_refactor/extensions/ms-python.python-2023.22.1/pythonFiles/printEnvVariablesToFile.py /home/halechr/Library/VSCode/explicit_for_refactor/extensions/ms-python.python-2023.22.1/pythonFiles/deactivate/bash/envVars.txt
+ 1082  mount_turbo 
+ 1083  mount_greatlakes 
+ 1084  wget -qO - https://hub.unity3d.com/linux/keys/public | gpg --dearmor | sudo tee /usr/share/keyrings/Unity_Technologies_ApS.gpg > /dev/null
+ 1085  sudo sh -c 'echo "deb [signed-by=/usr/share/keyrings/Unity_Technologies_ApS.gpg] https://hub.unity3d.com/linux/repos/deb stable main" > /etc/apt/sources.list.d/unityhub.list'
+ 1086  sudo apt update
+ 1087  sudo apt-get install unityhub
+ 1088  /home/halechr/repos/Spike3D/.venv/bin/python /home/halechr/cloud/turbo/Data/Output/gen_scripts/run_kdiba_gor01_two_2006-6-07_16-40-19/run_kdiba_gor01_two_2006-6-07_16-40-19.py
+ 1089  pyright
+ 1090  pyright --create-stub pyphoplacecellanalysis --pythonpath
+ 1091  pyright --help
+ 1092  pyright --createstub pyphoplacecellanalysis
+ 1093  ls
+ 1094  which python
+ 1095  pyright --createstub pyphoplacecellanalysis --pythonpath /home/halechr/repos/Spike3D/.venv/bin/python --pythonversion 3.9
+ 1096  pyright --createstub neuropy --pythonpath /home/halechr/repos/Spike3D/.venv/bin/python --pythonversion 3.9
+ 1097  pyright --createstub pyphocorehelpers --pythonpath /home/halechr/repos/Spike3D/.venv/bin/python --pythonversion 3.9
+ 1098  pyright --help
+ 1099  pyright
+ 1100  pyright --help
+ 1101  pyright --createstub neuropy
+ 1102  ./bin/globusconnectpersonal/globusconnectpersonal 
+ 1103  sudo apt-get update
+ 1104  sudo apt-get install git-annex
+ 1105  sudo apt-get install autobuild
+ 1106  sudo apt-get install cmake
+ 1107  sudo reboot
+ 1108  cd repos/Spike3D/
+ 1109  git status
+ 1110  git stash save "Lab"
+ 1111  git pull
+ 1112  ./scripts/unix/repos_pull_changes.sh 
+ 1113  /home/halechr/repos/Spike3D/.venv/bin/python /home/halechr/FastData/gen_scripts/run_kdiba_gor01_one_2006-6-08_14-26-15/run_kdiba_gor01_one_2006-6-08_14-26-15.py
+ 1114  /home/halechr/.pyenv/versions/3.9.13/bin/python /home/halechr/Library/VSCode/explicit_for_refactor/extensions/ms-python.python-2023.22.1/pythonFiles/printEnvVariablesToFile.py /home/halechr/Library/VSCode/explicit_for_refactor/extensions/ms-python.python-2023.22.1/pythonFiles/deactivate/bash/envVars.txt
+ 1115  sudo apt-get install wine
+ 1116  sudo apt-get install xdg-desktop-portal-gtk 
+ 1117  sudo apt-get update
+ 1118  sudo apt-get upgrade
+ 1119  flatpak install flathub org.fedoraproject.MediaWriter
+ 1120  sudo add-apt-repository ppa:flatpak/stable
+ 1121  sudo apt install gnome-software-plugin-flatpak
+ 1122  flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
+ 1123  sudo apt-get install liveusb-creator
+ 1124  flatpak install flathub org.fedoraproject.MediaWriter
+ 1125  flatpak run org.fedoraproject.MediaWriter
+ 1126  cd /etc/sysctl.d/
+ 1127  ls
+ 1128  code README.sysctl 
+ 1129  nano 11-local.conf
+ 1130  sudo nano 11-local.conf
+ 1131  sudo sysctl -p --system
+ 1132  ls
+ 1133  sudo nano /usr/lib/sysctl.d/30-tracker.conf
+ 1134  ls
+ 1135  sudo sysctl -p --system
+ 1136  cd ~/
+ 1137  ls
+ 1138  cd .var
+ 1139  cd app/com.jetbrains.PyCharm-Community/config/JetBrains/PyCharmCE2023.3/
+ 1140  ls
+ 1141  rm .lock
+ 1142  sysctl fs.inotify.max_user_watches
+ 1143  cd /b
+ 1144  cd ~/bin/
+ 1145  ls
+ 1146  git clone https://github.com/mikesart/inotify-info.git
+ 1147  cd inotify-info/
+ 1148  make
+ 1149  cp _release/inotify-info /usr/local/bin/
+ 1150  ls
+ 1151  sudo cp _release/inotify-info /usr/local/bin/
+ 1152  inotify-info 
+ 1153  sudo apt remove tracker tracker-extract tracker-miner-fs
+ 1154  sudo apt-get update
+ 1155  tracker reset --hard
+ 1156  systemctl --user mask tracker-{miner-apps,miner-fs,store}
+ 1157  cd /etc/xdg/autostart/
+ 1158  ls
+ 1159  sudo nano tracker-extract.desktop 
+ 1160  mv tracker-extract.desktop ~/Desktop/
+ 1161  sudo mv tracker-extract.desktop ~/Desktop/
+ 1162  sudo mv tracker-miner-fs.desktop ~/Desktop/
+ 1163  inotify-info 
+ 1164  ./scripts/unix/repos_pull_changes.sh 
+ 1165  pyenv local
+ 1166  python -m venv pho_vscode_env
+ 1167  pyenv install 3.11
+ 1168  python -m venv pho_vscode_env
+ 1169  pyenv install 3.11
+ 1170  python -m venv pho_vscode_env
+ 1171  pho_vscode_env\Scripts\activate
+ 1172  ls
+ 1173  pyenv
+ 1174  pyenv virtualenvs
+ 1175  pyenv activate
+ 1176  pyenv activate pho_vscode_env
+ 1177  pyenv virtualenvs
+ 1178  ls
+ 1179  ls -la
+ 1180  cd pho_vscode_env/
+ 1181  ls
+ 1182  cd bin/
+ 1183  ls
+ 1184  cd ../../
+ 1185  ./pho_vscode_env/bin/activate
+ 1186  chmod +x pho_vscode_env/bin/*
+ 1187  ./pho_vscode_env/bin/activate
+ 1188  which python
+ 1189  ./pho_vscode_env/bin/activate --help
+ 1190  source /home/halechr/repos/pho-vscode/pho_vscode_env/bin/activate
+ 1191  python -m pip install -r requirements.txt
+ 1192  pip install --upgrade pip
+ 1193  pip install dvc-gdrive
+ 1194  dvc
+ 1195  dvc install
+ 1196  dvc pull
+ 1197  dvc update
+ 1198  dvc
+ 1199  dvc status
+ 1200  ls .git/hooks
+ 1201  cd pre-push
+ 1202  cd .git/hooks/pre-push
+ 1203  cd .git/hooks/
+ 1204  ls
+ 1205  cat pre-push
+ 1206  code pre-push
+ 1207  ls
+ 1208  dvc code.
+ 1209  code .
+ 1210  cd ~/Library/VSCode/explicit_for_refactor/user/User/profiles/-19dd243c/
+ 1211  ls
+ 1212  code .
+ 1213  cd /home/halechr/Library/VSCode/green
+ 1214  ls
+ 1215  pwd
+ 1216  cd ../
+ 1217  ls
+ 1218  cd explicit_for_refactor/
+ 1219  ls
+ 1220  mkdir bin
+ 1221  # Define source and destination directories
+ 1222  src_dir="~/Downloads/code-stable-x64-1696981541.tar.gz"
+ 1223  dst_dir="~/Library/VSCode/green/bin/VSCode-linux-x64"
+ 1224  # Create the destination directory if it doesn't exist
+ 1225  mkdir -p "${dst_dir}"
+ 1226  # Extract the tar.gz file to the destination directory
+ 1227  tar -xzf "${src_dir}" -C "${dst_dir}"
+ 1228  ~/Downloads/j
+ 1229  ~/Downloads/
+ 1230  cd ~/Downloads/
+ 1231  ls
+ 1232  pwd
+ 1233  # Define source and destination directories
+ 1234  src_dir="/home/halechr/Downloads/code-stable-x64-1696981541.tar.gz"
+ 1235  dst_dir="/home/halechr/Library/VSCode/green/bin/VSCode-linux-x64"
+ 1236  # Create the destination directory if it doesn't exist
+ 1237  mkdir -p "${dst_dir}"
+ 1238  # Extract the tar.gz file to the destination directory
+ 1239  tar -xzf "${src_dir}" -C "${dst_dir}"
+ 1240  cd /home/halechr/Library/VSCode/green/bin
+ 1241  ls
+ 1242  cd VSCode-linux-x64/
+ 1243  ls
+ 1244  cd ../
+ 1245  rm -rf VSCode-linux-x64/
+ 1246  # Define source and destination directories
+ 1247  src_dir="/home/halechr/Downloads/code-stable-x64-1696981541.tar.gz"
+ 1248  dst_dir="/home/halechr/Library/VSCode/green/bin/" # extraction will create a subdirectory VSCode-linux-x64
+ 1249  # Create the destination directory if it doesn't exist
+ 1250  mkdir -p "${dst_dir}"
+ 1251  # Extract the tar.gz file to the destination directory
+ 1252  tar -xzf "${src_dir}" -C "${dst_dir}"
+ 1253  ls
+ 1254  cd VSCode-linux-x64/
+ 1255  ls
+ 1256  chmod +x code 
+ 1257  ls
+ 1258  color_name='red'
+ 1259  # Define source and destination directories
+ 1260  src_dir="/home/halechr/Downloads/code-stable-x64-1696981541.tar.gz"
+ 1261  dst_dir="/home/halechr/Library/VSCode/$color_name/bin/" # extraction will create a subdirectory VSCode-linux-x64
+ 1262  # Create the destination directory if it doesn't exist
+ 1263  mkdir -p "${dst_dir}"
+ 1264  # Extract the tar.gz file to the destination directory
+ 1265  tar -xzf "${src_dir}" -C "${dst_dir}"
+ 1266  cd ../../../
+ 1267  ls
+ 1268  cd red
+ 1269  ls
+ 1270  cd bin
+ 1271  cd VSCode-linux-x64/
+ 1272  ls
+ 1273  color_name='blue'
+ 1274  # Define source and destination directories
+ 1275  src_dir="/home/halechr/Downloads/code-stable-x64-1696981541.tar.gz"
+ 1276  dst_dir="/home/halechr/Library/VSCode/$color_name/bin/" # extraction will create a subdirectory VSCode-linux-x64
+ 1277  # Create the destination directory if it doesn't exist
+ 1278  mkdir -p "${dst_dir}"
+ 1279  # Extract the tar.gz file to the destination directory
+ 1280  tar -xzf "${src_dir}" -C "${dst_dir}"
+ 1281  color_name='cyan'
+ 1282  # Define source and destination directories
+ 1283  src_dir="/home/halechr/Downloads/code-stable-x64-1696981541.tar.gz"
+ 1284  dst_dir="/home/halechr/Library/VSCode/$color_name/bin/" # extraction will create a subdirectory VSCode-linux-x64
+ 1285  # Create the destination directory if it doesn't exist
+ 1286  mkdir -p "${dst_dir}"
+ 1287  # Extract the tar.gz file to the destination directory
+ 1288  tar -xzf "${src_dir}" -C "${dst_dir}"
+ 1289  cd /home/halechr/Library/VSCode
+ 1290  mkdir yellow/user -p
+ 1291  mkdir yellow/extensions -p
+ 1292  mkdir yellow/bin -p
+ 1293  color_name='yellow'
+ 1294  # Define source and destination directories
+ 1295  src_dir="/home/halechr/Downloads/code-stable-x64-1696981541.tar.gz"
+ 1296  dst_dir="/home/halechr/Library/VSCode/$color_name/bin/" # extraction will create a subdirectory VSCode-linux-x64
+ 1297  # Create the destination directory if it doesn't exist
+ 1298  mkdir -p "${dst_dir}"
+ 1299  # Extract the tar.gz file to the destination directory
+ 1300  tar -xzf "${src_dir}" -C "${dst_dir}"
+ 1301  color_name='explicit_for_refactor'
+ 1302  # Define source and destination directories
+ 1303  src_dir="/home/halechr/Downloads/code-stable-x64-1696981541.tar.gz"
+ 1304  dst_dir="/home/halechr/Library/VSCode/$color_name/bin/" # extraction will create a subdirectory VSCode-linux-x64
+ 1305  # Create the destination directory if it doesn't exist
+ 1306  mkdir -p "${dst_dir}"
+ 1307  # Extract the tar.gz file to the destination directory
+ 1308  tar -xzf "${src_dir}" -C "${dst_dir}"
+ 1309  color_name='explicit_for_refactor'
+ 1310  # Define source and destination directories
+ 1311  src_dir="/home/halechr/Downloads/code-stable-x64-1696981541.tar.gz"
+ 1312  dst_dir="/home/halechr/Library/VSCode/$color_name/bin/" # extraction will create a subdirectory VSCode-linux-x64
+ 1313  code_bin_path="${dst_dir}/code"
+ 1314  # Create the destination directory if it doesn't exist
+ 1315  mkdir -p "${dst_dir}"
+ 1316  # Extract the tar.gz file to the destination directory
+ 1317  tar -xzf "${src_dir}" -C "${dst_dir}"
+ 1318  echo "${code_bin_path}"
+ 1319  /home/halechr/.pyenv/versions/3.9.13/bin/python /home/halechr/Library/VSCode/green/extensions/ms-python.python-2023.22.1/pythonFiles/printEnvVariablesToFile.py /home/halechr/Library/VSCode/green/extensions/ms-python.python-2023.22.1/pythonFiles/deactivate/bash/envVars.txt
+ 1320  cd /home/halechr/Library/VSCode/green/user
+ 1321  ls
+ 1322  source /home/halechr/repos/pho-vscode/pho_vscode_env/bin/activate
+ 1323  python -m pip install ipykernel
+ 1324  python -m pip install -r requirements.txt 
+ 1325  python -m pip install -r platformdirs
+ 1326  python -m pip install  platformdirs
+ 1327  python scripts/icon_helpers.py 
+ 1328  cd ~/repos/
+ 1329  cd pho-vscode/
+ 1330  git pull
+ 1331  git status
+ 1332  code .
+ 1333  /home/halechr/Library/VSCode/green/bin/code --user-data-dir="/home/halechr/Library/VSCode/explicit_for_refactor/user" --extensions-dir="/home/halechr/Library/VSCode/explicit_for_refactor/extensions" & --user-data-dir="/home/halechr/Library/VSCode/green/user" --extensions-dir="/home/halechr/Library/VSCode/green/extensions" &
+ 1334  /home/halechr/Library/VSCode/green/bin/code --user-data-dir="/home/halechr/Library/VSCode/green/user" --extensions-dir="/home/halechr/Library/VSCode/green/extensions" &
+ 1335  # Extract the tar.gz file to the destination directory
+ 1336  color_name='green'
+ 1337  # Define source and destination directories
+ 1338  src_dir="/home/halechr/Downloads/code-stable-x64-1696981541.tar.gz"
+ 1339  dst_dir="/home/halechr/Library/VSCode/$color_name/bin/" # extraction will create a subdirectory VSCode-linux-x64
+ 1340  code_bin_path="${dst_dir}VSCode-linux-x64/code"
+ 1341  # Create the destination directory if it doesn't exist
+ 1342  mkdir -p "${dst_dir}"
+ 1343  # Extract the tar.gz file to the destination directory
+ 1344  tar -xzf "${src_dir}" -C "${dst_dir}"
+ 1345  echo "${code_bin_path}"
+ 1346  /home/halechr/Library/VSCode/green/bin/VSCode-linux-x64/code --user-data-dir="/home/halechr/Library/VSCode/green/user" --extensions-dir="/home/halechr/Library/VSCode/green/extensions" &
+ 1347  cd /home/halechr/Library/VSCode/red/bin/VSCode-linux-x64/
+ 1348  ls
+ 1349  cd ~/repos/
+ 1350  cd Spike3D/
+ 1351  git status
+ 1352  cd ../
+ 1353  cd pyPhoPlaceCellAnalysis/
+ 1354  git staus
+ 1355  git status
+ 1356  git commit -a
+ 1357  git push
+ 1358  git status
+ 1359  cd ../NeuroPy/
+ 1360  git status
+ 1361  git commit -a
+ 1362  git push
+ 1363  cd ../
+ 1364  cd pyPhoPlaceCellAnalysis/
+ 1365  cd ../
+ 1366  ls
+ 1367  cd pyPhoCoreHelpers/
+ 1368  git status
+ 1369  git push
+ 1370  cd ../
+ 1371  /home/halechr/.pyenv/versions/3.9.13/bin/python /home/halechr/Library/VSCode/green/extensions/ms-python.python-2024.0.1/pythonFiles/printEnvVariablesToFile.py /home/halechr/Library/VSCode/green/extensions/ms-python.python-2024.0.1/pythonFiles/deactivate/bash/envVars.txt
+ 1372  ./scripts/unix/repos_pull_changes.sh 
+ 1373  git push
+ 1374  cd ../NeuroPy/
+ 1375  git push
+ 1376  cd ../pyPhoCoreHelpers/
+ 1377  git push
+ 1378  cd ../pyPhoCoreHelpers/
+ 1379  git push
+ 1380  sudo apt-get update
+ 1381  cd ~/repos/
+ 1382  conda create -n mgie python=3.10 -y
+ 1383  sudo apt-get install mamba
+ 1384  cd ~/Downloads/
+ 1385  curl -L -O "https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-$(uname)-$(uname -m).sh"
+ 1386  bash Miniforge3-$(uname)-$(uname -m).sh
+ 1387  mamba create -n mgie python=3.10 -y
+ 1388  conda create -n mgie python=3.10 -y
+ 1389  anaconda
+ 1390  miniforge
+ 1391  mamba info
+ 1392  source ~/.bashrc 
+ 1393  mamba
+ 1394  "${SHELL}" <(curl -L micro.mamba.pm/install.sh)
+ 1395  micromamba shell
+ 1396  mamba
+ 1397  micromamba 
+ 1398  micromamba create -n mgie python=3.10 -y
+ 1399  micromamba activate mgie
+ 1400  micromamba run -n mgie update -n base -c defaults conda setuptools -y
+ 1401  micromamba run -n mgie mamba update -n base -c defaults conda setuptools -y
+ 1402  micromamba run -n mgie conda update -n base -c defaults conda setuptools -y
+ 1403  sudo reboot
+ 1404  mount_all_cloud_drives 
+ 1405  mount_greatlakes 
+ 1406  mount_turbo 
+ 1407  cd /home/halechr/cloud/turbo/Data/Output/collected_outputs
+ 1408  git status
+ 1409  git add General/Pipeline/Stages/DisplayFunctions/DecoderPredictionError.py
+ 1410  git status
+ 1411  git commit -m "Lab"
+ 1412  git pull
+ 1413  git push
+ 1414  git status
+ 1415  git status
+ 1416  git status
+ 1417  git push
+ 1418  poetry install orange
+ 1419  poetry install plotly dash
+ 1420  poetry add PyQtWebEngine orange3
+ 1421  poetry add orange3
+ 1422  orange3
+ 1423  python -m orange3
+ 1424  python -m orange
+ 1425  python -m orange3
+ 1426  poetry shell
+ 1427  . /home/halechr/repos/Spike3D/.venv/bin/activate
+ 1428  python -m orange3
+ 1429  python -m orange
+ 1430  orange3
+ 1431  orange
+ 1432  orange-canvas 
+ 1433  poetry add kaleido
+ 1434  poetry add pycorrelate
+ 1435  /home/halechr/.pyenv/versions/3.9.13/bin/python /home/halechr/Library/VSCode/red/extensions/ms-python.python-2024.0.1/pythonFiles/printEnvVariablesToFile.py /home/halechr/Library/VSCode/red/extensions/ms-python.python-2024.0.1/pythonFiles/deactivate/bash/envVars.txt
+ 1436  mamba
+ 1437  ls
+ 1438  cd micromamba/
+ 1439  ls
+ 1440  cd ../
+ 1441  cd ~/repos/
+ 1442  cd Spike3D/
+ 1443  git pull
+ 1444  ./scripts/unix/repos_pull_changes.sh 
+ 1445  ls
+ 1446  git pull
+ 1447  sudo apt-get update &&   sudo apt-get install -y dotnet-sdk-8.0
+ 1448  # Get Ubuntu version
+ 1449  declare repo_version=$(if command -v lsb_release &> /dev/null; then lsb_release -r -s; else grep -oP '(?<=^VERSION_ID=).+' /etc/os-release | tr -d '"'; fi)
+ 1450  # Download Microsoft signing key and repository
+ 1451  wget https://packages.microsoft.com/config/ubuntu/$repo_version/packages-microsoft-prod.deb -O packages-microsoft-prod.deb
+ 1452  # Install Microsoft signing key and repository
+ 1453  sudo dpkg -i packages-microsoft-prod.deb
+ 1454  # Clean up
+ 1455  rm packages-microsoft-prod.deb
+ 1456  # Update packages
+ 1457  sudo apt update
+ 1458  sudo apt-get update
+ 1459  sudo apt-get update &&   sudo apt-get install -y dotnet-sdk-8.0
+ 1460  sudo apt-get install -y dotnet-runtime-8.0
+ 1461  sudo apt-get install -y gpg
+ 1462  npm install
+ 1463  echo /usr/bin/bash
+ 1464  /home/halechr/.pyenv/versions/3.9.13/bin/python /home/halechr/.vscode/extensions/ms-python.python-2023.22.1/pythonFiles/printEnvVariablesToFile.py /home/halechr/.vscode/extensions/ms-python.python-2023.22.1/pythonFiles/deactivate/bash/envVars.txt
+ 1465  git status
+ 1466  git push
+ 1467  /home/halechr/.pyenv/versions/3.9.13/bin/python /home/halechr/.vscode/extensions/ms-python.python-2023.22.1/pythonFiles/printEnvVariablesToFile.py /home/halechr/.vscode/extensions/ms-python.python-2023.22.1/pythonFiles/deactivate/bash/envVars.txt
+ 1468  echo /usr/bin/bash
+ 1469  git status
+ 1470  git commit -a
+ 1471  git pull
+ 1472  git push
+ 1473  npm install
+ 1474  cd ../
+ 1475  cd External/
+ 1476  git clone https://github.com/CommanderPho/vscode-extension-samples.git
+ 1477  git clone https://github.com/CommanderPho/hipdot-vs-code-url-scheme-grabber.git
+ 1478  cd ../
+ 1479  git cloen https://github.com/CommanderPho/vscode-pho-colors.git
+ 1480  git clone https://github.com/CommanderPho/vscode-pho-colors.git
+ 1481  cd ../
+ 1482  cd VSCode_Extensions/
+ 1483  cd External/
+ 1484  git clone https://github.com/CommanderPho/vscode-line-linker.git
+ 1485  git clone https://github.com/CommanderPho/snippet.git
+ 1486  git clone https://github.com/CommanderPho/vscode-transform-selection.git
+ 1487  git clone https://github.com/CommanderPho/vscode-action-buttons.git
+ 1488  cd vscode-action-buttons/
+ 1489  yarn
+ 1490  ls
+ 1491  npm install
+ 1492  code .
+ 1493  cd pho-vscode/
+ 1494  ls
+ 1495  git status
+ 1496  git pull
+ 1497  git add profiles/PhoLab2024_System.code-profile 
+ 1498  git commit -m "Lab"
+ 1499  git add README.md 
+ 1500  git add requirements.txt 
+ 1501  git add scripts/icon_helpers.py 
+ 1502  git add scripts/launcher_shortcuts.py 
+ 1503  git add NOTES/Notes.md 
+ 1504  git add NOTES/VSCodeHelpers_Info.md 
+ 1505  git add Launchers/Linux/VSCode.Green.desktop 
+ 1506  git add Launchers/Linux/VSCode.Red.desktop 
+ 1507  git add .python-version 
+ 1508  git commit -m "Lab"
+ 1509  git pull
+ 1510  git push
+ 1511  git status
+ 1512  cd ~/repos/VSCode_Extensions/
+ 1513  npm install -g yo generator-code
+ 1514  npm install -g npm@10.4.0
+ 1515  yo code
+ 1516  ls
+ 1517  cd custom-text-transform/
+ 1518  sudo apt-get install yarn
+ 1519  sudo apt-get install yarn nodejs node
+ 1520  sudo apt-get install yarn nodejs 
+ 1521  ls
+ 1522  yarn
+ 1523  cd ../
+ 1524  rm -rf custom-text-transform/
+ 1525  yo code
+ 1526  rm -rf custom-text-transform/
+ 1527  yo code
+ 1528  mkdir External
+ 1529  cd External/
+ 1530  git clone https://github.com/CommanderPho/vscode-transform-selection.git
+ 1531  cd ../
+ 1532  cd custom-text-transform/
+ 1533  git remote add origin https://github.com/CommanderPho/vscode-custom-text-transform.git
+ 1534  git branch -M main
+ 1535  git remote add origin https://github.com/CommanderPho/vscode-custom-text-transform.git
+ 1536  git status
+ 1537  git remote add origin https://github.com/CommanderPho/vscode-custom-text-transform.git
+ 1538  git remote
+ 1539  git remote origin
+ 1540  git remote remove origin
+ 1541  git remote add origin https://github.com/CommanderPho/vscode-custom-text-transform.git
+ 1542  git branch -M main
+ 1543  git push -u origin main
+ 1544  git status
+ 1545  git add -A
+ 1546  git commit -m "Initial Commit"
+ 1547  git push
+ 1548  git push --set-upstream origin master
+ 1549  git push
+ 1550  git status
+ 1551  git push
+ 1552  ./scripts/unix/repos_pull_changes.sh 
+ 1553  git status
+ 1554  poetry update matplotlib
+ 1555  git status
+ 1556  git push
+ 1557  git status
+ 1558  git Analysis/Decoder/decoder_result.py
+ 1559  git add Analysis/Decoder/decoder_result.py 
+ 1560  git add General/Pipeline/Stages/ComputationFunctions/DefaultComputationFunctions.py
+ 1561  git add  General/Pipeline/Stages/DisplayFunctions/DecoderPredictionError.py
+ 1562  git status
+ 1563  git commit -m "Lab"
+ 1564  ls
+ 1565  git pull
+ 1566  git push
+ 1567  git status
+ 1568  git pull
+ 1569  git push
+ 1570  git pull
+ 1571  git push
+ 1572  git status
+ 1573  git status
+ 1574  git push
+ 1575  /home/halechr/.pyenv/versions/3.9.13/bin/python /home/halechr/Library/VSCode/green/extensions/ms-python.python-2024.0.1/pythonFiles/printEnvVariablesToFile.py /home/halechr/Library/VSCode/green/extensions/ms-python.python-2024.0.1/pythonFiles/deactivate/bash/envVars.txt
+ 1576  sudo apt-get upgrade
+ 1577  sudo apt-get update
+ 1578  fwmupdmgr get-upgrades
+ 1579  fwupdmgr get-upgrades
+ 1580  fwupdmgr 
+ 1581  fwupdmgr --help
+ 1582  sudo reboot
+ 1583  cd ~/repos/Spike3D/
+ 1584  git pull
+ 1585  ./scripts/unix/repos_pull_changes.sh 
+ 1586  cd ../pyPhoPlaceCellAnalysis/
+ 1587  git pull
+ 1588  /home/halechr/.pyenv/versions/3.9.13/bin/python /home/halechr/Library/VSCode/red/extensions/ms-python.python-2024.0.1/pythonFiles/printEnvVariablesToFile.py /home/halechr/Library/VSCode/red/extensions/ms-python.python-2024.0.1/pythonFiles/deactivate/bash/envVars.txt
+ 1589  sudo apt-get install helix-p4d
+ 1590  wget -qO - https://package.perforce.com/perforce.pubkey | gpg --dearmor | sudo tee /usr/share/keyrings/perforce.gpg
+ 1591  wget -qO - https://package.perforce.com/perforce.pubkey
+ 1592  wget -qO - https://package.perforce.com/perforce.pubkey | sudo apt-key add -
+ 1593  sudo apt-get update
+ 1594  sudo apt-get install helix-p4d
+ 1595  nano /etc/apt/sources.list.d/perforce.list
+ 1596  sudo nano /etc/apt/sources.list.d/perforce.list
+ 1597  sudo apt-get update
+ 1598  sudo apt-get install helix-p4d
+ 1599  sudo apt-get install helix-cli
+ 1600  sudo /opt/perforce/sbin/configure-helix-p4d.sh -h
+ 1601  /home/halechr/.pyenv/versions/3.9.13/bin/python /home/halechr/Library/VSCode/green/extensions/ms-python.python-2024.0.1/pythonFiles/printEnvVariablesToFile.py /home/halechr/Library/VSCode/green/extensions/ms-python.python-2024.0.1/pythonFiles/deactivate/bash/envVars.txt
+ 1602  ./scripts/unix/repos_pull_changes.sh 
+ 1603  git status
+ 1604  git commit -a
+ 1605  git status
+ 1606  git push
+ 1607  git add LibrariesExamples/Silx/silx_RadonTransformTesting.ipynb
+ 1608  git add ReviewOfWork_2024-02-14_LAB.ipynb
+ 1609  git commit -m "Lab"
+ 1610  git push
+ 1611  git status
+ 1612  git add LibrariesExamples/Silx/EXTERNAL/
+ 1613  git commit -m "lab"
+ 1614  git push
+ 1615  dropbox stop
+ 1616  dropbox status  # Should report "not running"
+ 1617  rm -rf ~/.dropbox-dist
+ 1618  rm -rf /var/lib/dropbox
+ 1619  rm -rf ~/.dropbox*
+ 1620  sudo apt-get remove nautilus-dropbox
+ 1621  sudo apt-get remove dropbox
+ 1622  sudo apt-get search dropbox
+ 1623  uname
+ 1624  uname --help
+ 1625  uname --a
+ 1626  uname -o
+ 1627  uname -o --version
+ 1628  lsb_release -a
+ 1629  dropbox
+ 1630  flatpack
+ 1631  flatpack uninstall dropbox
+ 1632  sudo apt-get remove flatpack
+ 1633  sudo apt-get install flatpack
+ 1634  flatpak
+ 1635  flatpak uninstall dropbox
+ 1636  cd ~/Dropbox/
+ 1637  ls
+ 1638  cd ~/Downloads/
+ 1639  ls
+ 1640  sudo dpkg --install dropbox_2020.03.04_amd64(1).deb
+ 1641  sudo dpkg --install 'dropbox_2020.03.04_amd64(1).deb'
+ 1642  nautilus --quit
+ 1643  dropbox --help
+ 1644  dropbox
+ 1645  sudo apt-get install libpython3.9-dev
+ 1646  sudo apt-get install libpython3.11-dev
+ 1647  sudo apt-get install libpython3-dev
+ 1648  sudo apt-get install libpython3-all-dev
+ 1649  cd ~ && wget -O - "https://www.dropbox.com/download?plat=lnx.x86_64" | tar xzf -
+ 1650  rm -rf .dropbox*
+ 1651  ls
+ 1652  cd ~ && wget -O - "https://www.dropbox.com/download?plat=lnx.x86_64" | tar xzf -
+ 1653  ~/.dropbox-dist/dropboxd 
+ 1654  sudo reboot
+ 1655  cd ~/repos/Spike3D/
+ 1656  git status
+ 1657  git pull
+ 1658  ./scripts/unix/repos_pull_changes.sh 
+ 1659  /home/halechr/.pyenv/versions/3.11.7/bin/python /home/halechr/Library/VSCode/yellow/extensions/ms-python.python-2023.22.1/pythonFiles/printEnvVariablesToFile.py /home/halechr/Library/VSCode/yellow/extensions/ms-python.python-2023.22.1/pythonFiles/deactivate/bash/envVars.txt
+ 1660  /bin/python /home/halechr/Library/VSCode/yellow/extensions/ms-python.python-2024.0.1/pythonFiles/printEnvVariablesToFile.py /home/halechr/Library/VSCode/yellow/extensions/ms-python.python-2024.0.1/pythonFiles/deactivate/bash/envVars.txt
+ 1661  source /home/halechr/repos/pho-vscode/pho_vscode_env/bin/activate
+ 1662  /home/halechr/repos/pho-vscode/pho_vscode_env/bin/python /home/halechr/repos/pho-vscode/scripts/launcher_shortcuts.py
+ 1663  git status
+ 1664  git pull
+ 1665  /home/halechr/repos/pho-vscode/pho_vscode_env/bin/python /home/halechr/repos/pho-vscode/scripts/launcher_shortcuts.py
+ 1666  poetry add numpy
+ 1667  python -m pip install numpy
+ 1668  /home/halechr/repos/pho-vscode/pho_vscode_env/bin/python /home/halechr/repos/pho-vscode/scripts/launcher_shortcuts.py
+ 1669  ./bin/globusconnectpersonal/globusconnectpersonal 
+ 1670  mount_turbo 
+ 1671  mount_greatlakes 
+ 1672  sudo apt-get install helix-p4d
+ 1673  sudo /opt/perforce/sbin/configure-helix-p4d.sh
+ 1674  p4 typemap
+ 1675  p4 typemap --help
+ 1676  p4 typemap
+ 1677  sudo apt-get update
+ 1678  sudo apt-get install -y apt-transport-https
+ 1679  echo "deb https://www.plasticscm.com/plasticrepo/stable/ubuntu/ ./" | sudo tee /etc/apt/sources.list.d/plasticscm-stable.list
+ 1680  wget https://www.plasticscm.com/plasticrepo/stable/ubuntu/Release.key -O - | sudo apt-key add -
+ 1681  sudo apt-get update
+ 1682  sudo apt-get install plasticscm-complete
+ 1683  sudo apt-get install plasticscm-dvcs
+ 1684  plasticgui --configure
+ 1685  cm configure
+ 1686  cm configure --help
+ 1687  sudo apt-get install p4-config
+ 1688  sudo apt-get search p4-
+ 1689  python -m pip install kaleido==0.2.1
+ 1690  /home/halechr/.pyenv/versions/3.9.13/bin/python /home/halechr/Library/VSCode/red/extensions/ms-python.python-2024.0.1/pythonFiles/printEnvVariablesToFile.py /home/halechr/Library/VSCode/red/extensions/ms-python.python-2024.0.1/pythonFiles/deactivate/bash/envVars.txt
+ 1691  /bin/python /home/halechr/Library/VSCode/yellow/extensions/ms-python.python-2024.0.1/pythonFiles/printEnvVariablesToFile.py /home/halechr/Library/VSCode/yellow/extensions/ms-python.python-2024.0.1/pythonFiles/deactivate/bash/envVars.txt
+ 1692  ./Setup.sh 
+ 1693  ./SetupMono.sh 
+ 1694  ./SetupEnvironment.sh 
+ 1695  ./GenerateProjectFiles.sh 
+ 1696  ./Build.sh 
+ 1697  ./UnrealEditor
+ 1698  cd ~/repos/pyPhoPlaceCellAnalysis/
+ 1699  git status
+ 1700  git commit -a 
+ 1701  git push
+ 1702  git pull
+ 1703  git stash save "Lab"
+ 1704  git pull
+ 1705  ./scripts/unix/repos_pull_changes.sh 
+ 1706  git pull
+ 1707  git push
+ 1708  /bin/python /home/halechr/Library/VSCode/yellow/extensions/ms-python.python-2024.0.1/pythonFiles/printEnvVariablesToFile.py /home/halechr/Library/VSCode/yellow/extensions/ms-python.python-2024.0.1/pythonFiles/deactivate/bash/envVars.txt
+ 1709  cd pyPhoPlaceCellAnalysis/
+ 1710  git status
+ 1711  git commit -a
+ 1712  git push
+ 1713  git status
+ 1714  git push
+ 1715  cd ../NeuroPy/
+ 1716  git status
+ 1717  git push
+ 1718  cd ~/repos/
+ 1719  ls
+ 1720  cd Spike3D/
+ 1721  git status
+ 1722  git push
+ 1723  cd ../pyPhoPlaceCellAnalysis/
+ 1724  git status
+ 1725  git commit -a
+ 1726  git push
+ 1727  mount_greatlakes 
+ 1728  mount_turbo 
+ 1729  /bin/python /home/halechr/Library/VSCode/yellow/extensions/ms-python.python-2024.0.1/pythonFiles/printEnvVariablesToFile.py /home/halechr/Library/VSCode/yellow/extensions/ms-python.python-2024.0.1/pythonFiles/deactivate/bash/envVars.txt
+ 1730  cd ~/repos/
+ 1731  ls
+ 1732  cd Spike3D/
+ 1733  git pull
+ 1734  cd ../
+ 1735  cd pyPhoPlaceCellAnalysis/
+ 1736  git pull
+ 1737  cd ../pyPhoCoreHelpers/
+ 1738  git pull
+ 1739  cd ../NeuroPy/
+ 1740  git pull
+ 1741  cd ../Spike3D/
+ 1742  git status
+ 1743  git push
+ 1744  cd ../pyPhoPlaceCellAnalysis/
+ 1745  git status
+ 1746  git commit -a
+ 1747  git push
+ 1748  cd ../NeuroPy/
+ 1749  git status
+ 1750  git commit-a
+ 1751  git commit -a
+ 1752  git push
+ 1753  cd ../
+ 1754  cd Spike3D/
+ 1755  git status
+ 1756  git add ReviewOfWork_2024-02-21.ipynb 
+ 1757  git commit -m "GL"
+ 1758  git pull
+ 1759  git push
+ 1760  sudo -i
+ 1761  /home/halechr/.pyenv/versions/3.9.13/bin/python /home/halechr/Library/VSCode/green/extensions/ms-python.python-2024.0.1/pythonFiles/printEnvVariablesToFile.py /home/halechr/Library/VSCode/green/extensions/ms-python.python-2024.0.1/pythonFiles/deactivate/bash/envVars.txt
+ 1762  cd ~/repos/Spike3D/
+ 1763  git status
+ 1764  git push
+ 1765  cd ../
+ 1766  cd pyPhoPlaceCellAnalysis/
+ 1767  git status
+ 1768  git commit -a
+ 1769  git push
+ 1770  cd ../NeuroPy/
+ 1771  git status
+ 1772  git commit -a
+ 1773  git push
+ 1774  cd ../pyPhoCoreHelpers/
+ 1775  git status
+ 1776  git push
+ 1777  git status
+ 1778  cd ../
+ 1779  cd Spike3D/
+ 1780  git status
+ 1781  git push
+ 1782  cd ../
+ 1783  cd pyPhoPlaceCellAnalysis/
+ 1784  git status
+ 1785  git push
+ 1786  cd ../pyPhoCoreHelpers/
+ 1787  git status
+ 1788  git push
+ 1789  cd ../
+ 1790  /bin/python /home/halechr/Library/VSCode/yellow/extensions/ms-python.python-2024.0.1/pythonFiles/printEnvVariablesToFile.py /home/halechr/Library/VSCode/yellow/extensions/ms-python.python-2024.0.1/pythonFiles/deactivate/bash/envVars.txt
+ 1791  sudo apt-get update
+ 1792  sudo apt-get upgrade
+ 1793  cd ~/repos/
+ 1794  ls
+ 1795  cd Spike3D/
+ 1796  git status
+ 1797  git pull
+ 1798  ./scripts/unix/repos_pull_changes.sh 
+ 1799  sudo reboot
+ 1800  /bin/python /home/halechr/Library/VSCode/yellow/extensions/ms-python.python-2024.0.1/pythonFiles/printEnvVariablesToFile.py /home/halechr/Library/VSCode/yellow/extensions/ms-python.python-2024.0.1/pythonFiles/deactivate/bash/envVars.txt
+ 1801  /home/halechr/repos/Spike3D/.venv/bin/python /home/halechr/repos/pyPhoPlaceCellAnalysis/src/pyphoplacecellanalysis/GUI/Qt/Widgets/LogViewerTextEdit.py
+ 1802  poetry status
+ 1803  git status
+ 1804  git commit -a
+ 1805  git push
+ 1806  git status
+ 1807  git commit -a
+ 1808  git push
+ 1809  git status
+ 1810  git add GUI/Qt/Widgets/LogViewerTextEdit.py
+ 1811  git commit -m "LogViewerTextEditor subclass"
+ 1812  git push
+ 1813  git status
+ 1814  git commit -a
+ 1815  git push
+ 1816  git status
+ 1817  git commia -a
+ 1818  git commit -a
+ 1819  git push
+ 1820  sudo apt-get update
+ 1821  sudo apt-get upgrade
+ 1822  env DISPLAY=:0.0 gnome-session-quit --logout
+ 1823  gnome-session-quit --logout --no-prompt
+ 1824  sudo reboot
+ 1825  ./bin/globusconnectpersonal/globusconnectpersonal 
+ 1826  /home/halechr/.pyenv/versions/3.9.13/bin/python /home/halechr/Library/VSCode/green/extensions/ms-python.python-2024.0.1/pythonFiles/printEnvVariablesToFile.py /home/halechr/Library/VSCode/green/extensions/ms-python.python-2024.0.1/pythonFiles/deactivate/bash/envVars.txt
+ 1827  /home/halechr/.pyenv/versions/3.9.13/bin/python /home/halechr/Library/VSCode/green/extensions/ms-python.python-2024.0.1/pythonFiles/printEnvVariablesToFile.py /home/halechr/Library/VSCode/green/extensions/ms-python.python-2024.0.1/pythonFiles/deactivate/bash/envVars.txt
+ 1828  git pull
+ 1829  ./scripts/unix/repos_pull_changes.sh 
+ 1830  /bin/python /home/halechr/Library/VSCode/yellow/extensions/ms-python.python-2024.0.1/pythonFiles/printEnvVariablesToFile.py /home/halechr/Library/VSCode/yellow/extensions/ms-python.python-2024.0.1/pythonFiles/deactivate/bash/envVars.txt
+ 1831  /home/halechr/.pyenv/versions/3.9.13/bin/python /home/halechr/Library/VSCode/green/extensions/ms-python.python-2024.0.1/pythonFiles/printEnvVariablesToFile.py /home/halechr/Library/VSCode/green/extensions/ms-python.python-2024.0.1/pythonFiles/deactivate/bash/envVars.txt
+ 1832  deactivate
+ 1833  git status
+ 1834  git commit -a
+ 1835  git status
+ 1836  git add notes/LinuxAdminDiary/2024-02-08 - Increasing inotify watchers and Disabling Tracker.md
+ 1837  git add 'notes/LinuxAdminDiary/2024-02-08 - Increasing inotify watchers and Disabling Tracker.md'
+ 1838  git commit -m "note"
+ 1839  git pull
+ 1840  git push
+ 1841  mount_all_cloud_drives 
+ 1842  deactivate
+ 1843  rclone --version
+ 1844  sudo -v ; curl https://rclone.org/install.sh | sudo bash
+ 1845  rclone --version
+ 1846  rclone config
+ 1847  cd /snap/rclone/current/.config/rclone
+ 1848  sudo -i
+ 1849  mount_all_cloud_drives 
+ 1850  mount_all_cloud_drives 
+ 1851  cd /media/halechr/MAX/
+ 1852  mount_all_cloud_drives 
+ 1853  mount_turbo 
+ 1854  mount_greatlakes 
+ 1855  sudo loginctl enable-linger $USER
+ 1856  systemctl --user start globusconnectpersonal
+ 1857  systemctl --user enable globusconnectpersonal
+ 1858  systemctl --user status globusconnectpersonal
+ 1859  /home/halechr/.pyenv/versions/3.9.13/bin/python /home/halechr/Library/VSCode/green/extensions/ms-python.python-2024.0.1/pythonFiles/printEnvVariablesToFile.py /home/halechr/Library/VSCode/green/extensions/ms-python.python-2024.0.1/pythonFiles/deactivate/bash/envVars.txt
+ 1860  cryptomator
+ 1861  cd bin/
+ 1862  ./cryptomator.AppImage 
+ 1863  ls
+ 1864  ./cryptomator.AppImage 
+ 1865  dropbox --help
+ 1866  dropbox
+ 1867  dropbox.py
+ 1868  which dropbox
+ 1869  which dropbox.py 
+ 1870  mount_all_cloud_drives 
+ 1871  sudo apt-get remove dropbox 
+ 1872  sudo apt-get install dropbox
+ 1873  nautilus --quit
+ 1874  dropbox --help
+ 1875  dropbox
+ 1876  which dropbox
+ 1877  sudo apt-get install dropbox
+ 1878  dropbox
+ 1879  which dropbox
+ 1880  /home/halechr/.pyenv/versions/3.9.13/bin/python /home/halechr/Library/VSCode/red/extensions/ms-python.python-2024.0.1/pythonFiles/printEnvVariablesToFile.py /home/halechr/Library/VSCode/red/extensions/ms-python.python-2024.0.1/pythonFiles/deactivate/bash/envVars.txt
+ 1881  sudo apt-get install tk tcllib
+ 1882  mkdir -p ~/.config/systemd/user/
+ 1883  code ~/.config/systemd/user/globusconnectpersonal.service
+ 1884  chmod +x cryptomator.AppImage 
+ 1885  cd Versions/
+ 1886  ls
+ 1887  chmod +x cryptomator-1.12.3-x86_64.AppImage 
+ 1888  /home/halechr/.pyenv/versions/3.9.13/bin/python /home/halechr/Library/VSCode/red/extensions/ms-python.python-2024.2.1/pythonFiles/printEnvVariablesToFile.py /home/halechr/Library/VSCode/red/extensions/ms-python.python-2024.2.1/pythonFiles/deactivate/bash/envVars.txt
+ 1889  ./tcam_serial_programmer
+ 1890  /sys/class/tty
+ 1891  cd /sys/class/tty
+ 1892  ls
+ 1893  ls ll /sys/class/tty/ttyUSB*
+ 1894  ll /sys/class/tty/ttyUSB*
+ 1895  cd ~/repos/Spike3D/
+ 1896  git status
+ 1897  git commit -a
+ 1898  git push
+ 1899  cd ../NeuroPy/
+ 1900  git status
+ 1901  git commit -a "Lab"
+ 1902  git commit -a
+ 1903  git status
+ 1904  git push
+ 1905  cd ../
+ 1906  ls
+ 1907  cd pyPhoPlaceCellAnalysis/
+ 1908  git status
+ 1909  git commit -a 
+ 1910  git push
+ 1911  cd ../
+ 1912  ls
+ 1913  cd pyPhoCoreHelpers/
+ 1914  git status
+ 1915  git push
+ 1916  sudo reboot
+ 1917  code /home/halechr/.bashrc 
+ 1918  git clone https://github.com/CommanderPho/miniscope-io.git
+ 1919  cd miniscope-io/
+ 1920  poetry install
+ 1921  ls
+ 1922  code .
+ 1923  cd ../
+ 1924  git clone https://github.com/CommanderPho/pomidaq.git
+ 1925  cd pomidaq/
+ 1926  ls
+ 1927  code .
+ 1928  /home/halechr/repos/Spike3D/.venv/bin/python /home/halechr/cloud/turbo/Data/Output/gen_scripts/run_kdiba_gor01_one_2006-6-08_14-26-15/run_kdiba_gor01_one_2006-6-08_14-26-15.py
+ 1929  /home/halechr/repos/Spike3D/.venv/bin/python /home/halechr/cloud/turbo/Data/Output/gen_scripts/run_kdiba_pin01_one_fet11-01_12-58-54/run_kdiba_pin01_one_fet11-01_12-58-54.py
+ 1930  open-ephys 
+ 1931  echo /usr/bin/bash
+ 1932  /home/halechr/.pyenv/versions/3.9.13/bin/python /home/halechr/.vscode/extensions/ms-python.python-2023.22.1/pythonFiles/printEnvVariablesToFile.py /home/halechr/.vscode/extensions/ms-python.python-2023.22.1/pythonFiles/deactivate/bash/envVars.txt
+ 1933  sudo apt install build-essential cmake ninja-build qtbase5-dev libqt5opengl5-dev                  libkf5configwidgets-dev libopencv-dev libavcodec-dev libavformat-dev libswscale-dev                  pybind11-dev python3-dev python3-numpy
+ 1934  mkdir build && cd buildcmake -GNinja -DCMAKE_BUILD_TYPE=RelWithDebInfo ..ninjasudo ninja installsudo ldconfig
+ 1935  mkdir build && cd build
+ 1936  cmake -GNinja -DCMAKE_BUILD_TYPE=RelWithDebInfo ..
+ 1937  ninja
+ 1938  sudo ninja install
+ 1939  mkdir build && cd build
+ 1940  cd build/
+ 1941  ls
+ 1942  cmake -GNinja -DCMAKE_BUILD_TYPE=RelWithDebInfo ..
+ 1943  ninja
+ 1944  ls
+ 1945  cmake -GNinja -DCMAKE_BUILD_TYPE=RelWithDebInfo ..
+ 1946  cmake
+ 1947  ninja
+ 1948  cmake -GNinja -DCMAKE_BUILD_TYPE=RelWithDebInfo ..
+ 1949  sudo apt-get install Qt5Svg
+ 1950  sudo apt-get install qt5-default 
+ 1951  sudo apt-get install qt5-image-formats-plugins 
+ 1952  sudo apt install libqt5svg5-dev
+ 1953  sudo apt-get install git build-essential cmake qt5-default qtscript5-dev libssl-dev qttools5-dev qttools5-dev-tools qtmultimedia5-dev libqt5svg5-dev libqt5webkit5-dev libsdl2-dev libasound2 libxmu-dev libxi-dev freeglut3-dev libasound2-dev libjack-jackd2-dev libxrandr-dev libqt5xmlpatterns5-dev libqt5xmlpatterns5 libqt5xmlpatterns5-private-dev
+ 1954  sudo apt-get install git build-essential cmake qt5-default qtscript5-dev libssl-dev qttools5-dev qttools5-dev-tools qtmultimedia5-dev libqt5svg5-dev libqt5webkit5-dev libsdl2-dev libasound2 libxmu-dev libxi-dev freeglut3-dev libasound2-dev libjack-jackd2-dev libxrandr-dev libqt5xmlpatterns5-dev libqt5xmlpatterns5 
+ 1955  cmake -GNinja -DCMAKE_BUILD_TYPE=RelWithDebInfo ..
+ 1956  sudo apt install flatpak
+ 1957  sudo apt install gnome-software-plugin-flatpak
+ 1958  flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
+ 1959  flatpak install flathub io.github.bothlab.pomidaq
+ 1960  cd ~/
+ 1961  deb --help
+ 1962  code .
+ 1963  htop
+ 1964  sudo apt-get update
+ 1965  sudo apt update
+ 1966  sudo apt upgrade
+ 1967  git status
+ 1968  git commit -a
+ 1969  git push
+ 1970  git status
+ 1971  cd ../pyPhoPlaceCellAnalysis/
+ 1972  git status
+ 1973  git push
+ 1974  /bin/python /home/halechr/Library/VSCode/yellow/extensions/ms-python.python-2024.0.1/pythonFiles/printEnvVariablesToFile.py /home/halechr/Library/VSCode/yellow/extensions/ms-python.python-2024.0.1/pythonFiles/deactivate/bash/envVars.txt
+ 1975  ./scripts/unix/repos_pull_changes.sh 
+ 1976  git status
+ 1977  git stash save "Lab"
+ 1978  git pull
+ 1979  ./scripts/unix/repos_pull_changes.sh 
+ 1980  git pull
+ 1981  git push
+ 1982  ./scripts/unix/repos_pull_changes.sh 
+ 1983  git status
+ 1984  git commit -a
+ 1985  git push
+ 1986  git status
+ 1987  git pull
+ 1988  ./scripts/unix/repos_pull_changes.sh 
+ 1989  sudo apt install parallel
+ 1990  sudo apt update
+ 1991  sudo apt-get upgrade
+ 1992  mount_turbo 
+ 1993  mount_all_cloud_drives 
+ 1994  mount_greatlakes 
+ 1995  mount_locker_dataDen 
+ 1996  cd ~/repos/Spike3D/
+ 1997  git status
+ 1998  git stash save "Lab"
+ 1999  git pull
+ 2000  ./scripts/unix/repos_pull_changes.sh 
+ 2001  cd ~/bin/pho_linux_helper_scripts/
+ 2002  cd notes/
+ 2003  ls
+ 2004  cd LinuxAdminDiary/
+ 2005  ls
+ 2006  mkdir Logs
+ 2007  cd Logs/
+ 2008  history > 2024-03-05_history.log

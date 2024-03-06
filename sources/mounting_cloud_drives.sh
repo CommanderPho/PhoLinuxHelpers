@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# Install rclone with `sudo -v ; curl https://rclone.org/install.sh | sudo bash`
+
 # Set the base path for cloud drives:
 # Uncomment one of the following lines to choose the base path.
 # CLOUD_BASE_PATH="/media/halechr/MAX/cloud"
