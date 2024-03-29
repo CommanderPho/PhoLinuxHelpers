@@ -31,6 +31,21 @@ mkdir -p "${CLOUD_BASE_PATH}"
 rclone_deamon_log_file_path="${CLOUD_BASE_PATH}/logs"
 mkdir -p "$rclone_deamon_log_file_path"
 
+is_symlinked_drive_mounted () {
+	local target="$1" # the local drive location
+    local mount_location="$2"
+    # Check if symlink already exists
+    if [ -L "$mount_location" ]; then
+        return 1
+        echo "The mount point is already mounted: $mount_location"
+    else
+        # Not mounted
+		return 0
+        # # Create the symlink
+        # ln -s "$target" "$mount_location"
+        # echo "Symlink created at $mount_location"
+    fi
+}
 
 is_cloud_drive_mounted () {
 	local remote="$1"
@@ -67,6 +82,21 @@ mount_sshfs_cloud_drive () {
     else
         mkdir -p "$mount_location"
         sshfs "$remote" "$mount_location" -o reconnect
+    fi
+}
+
+mount_symlinked_drive () {
+    local target="$1" # the local drive location
+    local mount_location="$2"
+    # Check if symlink already exists
+    if [ -L "$mount_location" ]; then
+        return 0
+        echo "The mount point is already mounted: $mount_location"
+    else
+        # Not mounted
+        # # Create the symlink
+        ln -s "$target" "$mount_location"
+        echo "Symlink created at $mount_location"
     fi
 }
 
@@ -115,6 +145,9 @@ mount_all_cloud_drives () {
     # Mount Cloud Drives:
     mount_cloud_drive "Diba_Lab_Shared_GDrive:" "${CLOUD_BASE_PATH}/GDrive_Diba_Shared" "${CLOUD_BASE_PATH}/logs/rclone_deamon_GDrive_Diba_Shared.log"
     mount_cloud_drive "Diba_Lab_UMich_Dropbox:" "${CLOUD_BASE_PATH}/Dropbox_Diba_Shared" "${CLOUD_BASE_PATH}/logs/rclone_deamon_Dropbox_Diba_Shared.log"
+    # Personal UMich GDrive
+    mount_cloud_drive "halechr_GDrive:" "${CLOUD_BASE_PATH}/GDrive_Pho_UMich" "${CLOUD_BASE_PATH}/logs/rclone_deamon_GDrive_Pho_UMich.log"
+
     # Personal Dropbox:
     mount_cloud_drive "Pho_Personal_Dropbox:" "${CLOUD_BASE_PATH}/Dropbox_Personal" "${CLOUD_BASE_PATH}/logs/rclone_deamon_Dropbox_Personal.log"
     # # Turbo via Greatlakes:
@@ -128,6 +161,7 @@ unmount_all_cloud_drives () {
     # Unmount Cloud Drives:
     unmount_cloud_drive "${CLOUD_BASE_PATH}/GDrive_Diba_Shared"
     unmount_cloud_drive "${CLOUD_BASE_PATH}/Dropbox_Diba_Shared"
+    unmount_cloud_drive "${CLOUD_BASE_PATH}/GDrive_Pho_UMich"
     unmount_cloud_drive "${CLOUD_BASE_PATH}/Dropbox_Personal"
     unmount_cloud_drive "${CLOUD_BASE_PATH}/turbo"
     unmount_cloud_drive "${CLOUD_BASE_PATH}/greatlakes"
