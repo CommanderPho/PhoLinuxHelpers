@@ -7,6 +7,13 @@ sshfs -o allow_other,defer_permissions "halechr@greatlakes-xfer.arc-ts.umich.edu
 sshfs -o allow_other,defer_permissions "halechr@greatlakes-xfer.arc-ts.umich.edu:/nfs/turbo/umms-kdiba/" "/Users/pho/cloud/turbo"
 
 
+
+
+sshfs -o ServerAliveInterval=45,ServerAliveCountMax=2,reconnect,allow_other,defer_permissions "halechr@greatlakes-xfer.arc-ts.umich.edu:/nfs/turbo/umms-kdiba/" "/Users/pho/cloud/turbo"
+-o 
+
+
+
 ## To Unmount:
 diskutil umount force ~/cloud/locker_dataDen
 diskutil umount force ~/cloud/turbo
