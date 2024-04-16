@@ -76,12 +76,25 @@ mount_cloud_drive () {
 mount_sshfs_cloud_drive () {
     local remote="$1"
     local mount_location="$2"
-    if mountpoint -q "$mount_location"; then
+    # if mountpoint -q "$mount_location"; then
+    if mount | grep -qs " on ${mount_location} "; then
         return 0
         # echo "The mount point is already mounted: $mount_location"
     else
         mkdir -p "$mount_location"
-        sshfs "$remote" "$mount_location" -o reconnect
+        # Check the operating system
+        local os_name=$(uname)
+
+        local sshfs_args="-o reconnect"
+
+        # If this is macOS, change the sshfs options
+        if [ "$os_name" = "Darwin" ]; then
+            # sshfs_args="-o ServerAliveInterval=45,ServerAliveCountMax=2,reconnect,allow_other,defer_permissions"
+            sshfs_args="-o reconnect,allow_other,defer_permissions -o ssh_command=\"ssh -o ServerAliveInterval=45 -o ServerAliveCountMax=2\""
+        fi
+
+        # Now run sshfs with the configured arguments
+        sshfs "$remote" "$mount_location" $sshfs_args
     fi
 }
 
