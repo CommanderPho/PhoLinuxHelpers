@@ -35,8 +35,13 @@ function ssh_supercomputer_tunnel () {
 }
 
 
+
 # ssh_supercomputer_tunnel gl3142 13809
 
+function ssh_lab_workstation () {
+    ssh halechr@RDLU0039.ddns.med.umich.edu
+    # rdlu0039.ddns.med.umich.edu
+}
 
 # Please modify the following Bash function to prompt the user for `great_lakes_node_name` if it isn't provided. Also make `vnc_port` optional and drop the relevant -L portion of the command if it isn't provided.
 # ```bash
