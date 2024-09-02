@@ -67,7 +67,7 @@ mount_cloud_drive () {
         return 0
         # echo "The mount point is already mounted: $mount_location"
     else
-        mkdir -p "$mount_location"
+        mkdir -p "$mount_location" 2>/dev/null
         rclone  --vfs-cache-mode writes mount --daemon "$remote" "$mount_location" --log-file="$rclone_deamon_log_file_location" --log-format=pid --network-mode
         # ` --vfs-cache-mode writes` this part caches files to be written locally, allowing your remote to be used/read while a write is occuring
     fi
@@ -81,7 +81,7 @@ mount_sshfs_cloud_drive () {
         return 0
         # echo "The mount point is already mounted: $mount_location"
     else
-        mkdir -p "$mount_location"
+        mkdir -p "$mount_location" 2>/dev/null
         # Check the operating system
         local os_name=$(uname)
 
