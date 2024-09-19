@@ -1,4 +1,14 @@
+
+# Solution
 https://forums.linuxmint.com/viewtopic.php?t=228835
+
+System Settings>Appearance>Application Style>Windows Decorations>Theme
+At the lower right there is a drop down menu 'Border size'.
+Change to "Very Large"
+
+Note: Don't try to grab the thin border line, just grab in the border as soon as your pointer changes to "expand" symbol.
+
+
 
 Potential:
 
