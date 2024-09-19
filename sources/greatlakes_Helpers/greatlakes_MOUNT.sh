@@ -40,10 +40,10 @@ mount_cloud_drive "halechr_GDrive:" "${CLOUD_BASE_PATH}/GDrive_Pho_UMich" "${CLO
 
 # on GreatLakes, turbo is accessible at:
 # ln -s /nfs/turbo/umms-kdiba/ ~/cloud/turbo
-mount_symlinked_drive /nfs/turbo/umms-kdiba/ ~/cloud/turbo
+mount_symlinked_drive /nfs/turbo/umms-kdiba/ "${CLOUD_BASE_PATH}/turbo"
 # on GreatLakes, DataDen/Locker is accessible at:
 # ln -s /nfs/dataden/umms-dibalab ~/cloud/locker_dataDen
-mount_symlinked_drive /nfs/dataden/umms-dibalab ~/cloud/locker_dataDen
+mount_symlinked_drive /nfs/dataden/umms-dibalab "${CLOUD_BASE_PATH}/locker_dataDen"
 
 
 # source "$HOME/repos/PhoLinuxHelpers/sources/greatlakes_Helpers/greatlakes_MOUNT.sh"
