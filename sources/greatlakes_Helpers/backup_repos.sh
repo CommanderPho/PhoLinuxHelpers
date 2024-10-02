@@ -58,7 +58,8 @@ backup_directories() {
   # Iterate over the directories and create a zip file for each
   for DIRECTORY in "$@"; do
     if [ -d "${DIRECTORY}" ]; then
-      ZIP_NAME="${DATE}_$(basename "${DIRECTORY}").zip"
+
+      ZIP_NAME="$(dirname "${DIRECTORY}")/${DATE}_$(basename "${DIRECTORY}").zip"
       echo "Creating backup for ${DIRECTORY} as ${ZIP_NAME}..."
       
       # Create a temporary directory within the specified temp space
@@ -68,7 +69,7 @@ backup_directories() {
       rsync -av "${RSYNC_EXCLUDES[@]}" "${DIRECTORY}/" "${TEMP_DIR}/"
 
       # Zip the temporary directory
-      zip -r "${ZIP_NAME}" -j "${TEMP_DIR}/"*
+      zip -r "${ZIP_NAME}" "${TEMP_DIR}/"*
       
       # Remove the temporary directory
       rm -rf "${TEMP_DIR}"
@@ -104,4 +105,8 @@ perform_archive_directory() {
 
 ## All
 # directories_to_backup=("PierreSecondRotation" "Environments" "Rotation_3_Kamran Diba Lab" "OLD__ARCHIVE")
+# perform_archive_directory "/nfs/turbo/umms-kdiba/Pho/" "${directories_to_backup[@]}"
+
+
+# directories_to_backup=("AllCombined" "Output")
 # perform_archive_directory "/nfs/turbo/umms-kdiba/Pho/" "${directories_to_backup[@]}"
