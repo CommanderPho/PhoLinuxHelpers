@@ -108,7 +108,7 @@ perform_archive_directory() {
 # perform_archive_directory "/nfs/turbo/umms-kdiba/Pho/" "${directories_to_backup[@]}"
 
 # source /home/halechr/repos/PhoLinuxHelpers/sources/greatlakes_Helpers/backup_repos.sh
-# directories_to_backup=("analysesResults" "Output")
+# directories_to_backup=("analysesResults")
 # perform_archive_directory "/nfs/turbo/umms-kdiba/Pho/" "${directories_to_backup[@]}"
 
 
