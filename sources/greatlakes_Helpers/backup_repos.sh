@@ -99,5 +99,5 @@ perform_archive_directory() {
 # perform_archive_directory "/home/halechr/repos/" "${directories_to_backup[@]}"
 
 # Example usage with a list of directories
-directories_to_backup=("PierreSecondRotation" "Environments" "OLD__ARCHIVE")
-perform_archive_directory "/nfs/turbo/umms-kdiba/turbo/Pho/" "${directories_to_backup[@]}"
+# directories_to_backup=("Rotation_3_Kamran Diba Lab" "OLD__ARCHIVE")
+# perform_archive_directory "/nfs/turbo/umms-kdiba/Pho/" "${directories_to_backup[@]}"
