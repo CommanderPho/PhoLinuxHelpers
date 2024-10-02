@@ -101,3 +101,7 @@ perform_archive_directory() {
 # Example usage with a list of directories
 # directories_to_backup=("Rotation_3_Kamran Diba Lab" "OLD__ARCHIVE")
 # perform_archive_directory "/nfs/turbo/umms-kdiba/Pho/" "${directories_to_backup[@]}"
+
+## All
+# directories_to_backup=("PierreSecondRotation" "Environments" "Rotation_3_Kamran Diba Lab" "OLD__ARCHIVE")
+# perform_archive_directory "/nfs/turbo/umms-kdiba/Pho/" "${directories_to_backup[@]}"
