@@ -39,7 +39,7 @@ backup_directories() {
   DATE=$(date +"%Y-%m-%d")
 
   # Define the exclude patterns
-  EXCLUDE_PATTERNS=("**/.git" "**/__pycache__" "**/.venv*")
+  EXCLUDE_PATTERNS=("**/.git" "**/__pycache__" "**/.venv*" "**/.DS_Store")
 
   # Build rsync exclude options
   RSYNC_EXCLUDES=()
