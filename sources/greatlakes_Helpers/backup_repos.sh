@@ -83,12 +83,13 @@ backup_directories() {
   DATE=$(date +"%Y-%m-%d")
 
   # Define the exclude patterns
-  EXCLUDE_PATTERNS=("**/.git" "**/__pycache__" "**/.venv")
+  EXCLUDE_PATTERNS=("**/.git" "**/__pycache__" "**/.venv*")
 
   # Iterate over the directories and create a zip file for each
   for DIRECTORY in "$@"; do
     if [ -d "${DIRECTORY}" ]; then
       ZIP_NAME="${DATE}_$(basename ${DIRECTORY}).zip"
+      # ZIP_NAME="${DATE}_$(basename ${DIRECTORY}).tar.gz"
       echo "Creating backup for ${DIRECTORY} as ${ZIP_NAME}..."
       
       # Create a temporary directory
@@ -99,7 +100,7 @@ backup_directories() {
 
       # Zip the temporary directory
       zip -r ${ZIP_NAME} -j "${TEMP_DIR}/"*
-
+      #tar -czf ${ZIP_NAME} "${DIRECTORY}"
       # Remove the temporary directory
       rm -rf "${TEMP_DIR}"
     else
@@ -108,15 +109,37 @@ backup_directories() {
   done
 }
 
+perform_backup_repos() {
+  folder_path="/home/halechr/repos/"
+  directories_to_backup=("NeuroPy" "pyPhoCoreHelpers" "pyPhoPlaceCellAnalysis" "Spike3D")
 
-folder_path="/home/halechr/repos/"
-directories_to_backup=("NeuroPy" "pyPhoCoreHelpers" "pyPhoPlaceCellAnalysis" "Spike3D")
+  # Build the absolute paths
+  full_paths_to_directories_to_backup=()
+  for dir_name in "${directories_to_backup[@]}"; do
+    full_paths_to_directories_to_backup+=("${folder_path}${dir_name}")
+  done
+  # full_paths_to_directories_to_backup=("/home/halechr/repos/NeuroPy" "/home/halechr/repos/pyPhoCoreHelpers" "/home/halechr/repos/pyPhoPlaceCellAnalysis" "/home/halechr/repos/Spike3D")
 
-# Build the absolute paths
-full_paths_to_directories_to_backup=()
-for dir_name in "${directories_to_backup[@]}"; do
-  full_paths_to_directories_to_backup+=("${folder_path}${dir_name}")
-done
-# full_paths_to_directories_to_backup=("/home/halechr/repos/NeuroPy" "/home/halechr/repos/pyPhoCoreHelpers" "/home/halechr/repos/pyPhoPlaceCellAnalysis" "/home/halechr/repos/Spike3D")
+  backup_directories "${full_paths_to_directories_to_backup[@]}"
+}
 
-backup_directories "${full_paths_to_directories_to_backup[@]}"
+# perform_backup_repos() 
+
+
+perform_archive_directory() {
+  local folder_path="$1"
+  local directories_to_backup=$2
+  # folder_path="/nfs/turbo/umms-kdiba/turbo/Pho/"
+  # directories_to_backup=("PierreSecondRotation" "Environments")
+  # directories_to_backup=("OLD__ARCHIVE")
+  
+  # Build the absolute paths
+  full_paths_to_directories_to_backup=()
+  for dir_name in "${directories_to_backup[@]}"; do
+    full_paths_to_directories_to_backup+=("${folder_path}${dir_name}")
+  done
+  backup_directories "${full_paths_to_directories_to_backup[@]}"
+}
+
+
+perform_archive_directory "/nfs/turbo/umms-kdiba/turbo/Pho/" ("OLD__ARCHIVE")
