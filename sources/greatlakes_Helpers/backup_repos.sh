@@ -107,6 +107,10 @@ perform_archive_directory() {
 # directories_to_backup=("PierreSecondRotation" "Environments" "Rotation_3_Kamran Diba Lab" "OLD__ARCHIVE")
 # perform_archive_directory "/nfs/turbo/umms-kdiba/Pho/" "${directories_to_backup[@]}"
 
+# source /home/halechr/repos/PhoLinuxHelpers/sources/greatlakes_Helpers/backup_repos.sh
+# directories_to_backup=("analysesResults" "Output")
+# perform_archive_directory "/nfs/turbo/umms-kdiba/Pho/" "${directories_to_backup[@]}"
 
-# directories_to_backup=("AllCombined" "Output")
+
+# directories_to_backup=("Rotation_3_Kamran Diba Lab")
 # perform_archive_directory "/nfs/turbo/umms-kdiba/Pho/" "${directories_to_backup[@]}"
