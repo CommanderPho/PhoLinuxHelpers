@@ -34,6 +34,7 @@ create_zip_backup_of_repos() {
 
 backup_directories() {
   ## 2024-10-02 - Newer than `create_zip_backup_of_repos`, written by ChatGPT
+  # See `perform_archive_directory` instead for direct usage
 
   # Define a date string in the format YYYY-MM-DD
   DATE=$(date +"%Y-%m-%d")
@@ -84,7 +85,18 @@ perform_archive_directory() {
   local folder_path="$1"
   shift
   local directories_to_backup=("$@")
-  
+  # # Backup Repos:
+  # directories_to_backup=("NeuroPy" "pyPhoCoreHelpers" "pyPhoPlaceCellAnalysis" "Spike3D")
+  # perform_archive_directory "/home/halechr/repos/" "${directories_to_backup[@]}"
+
+  # Example usage with a list of directories
+  # directories_to_backup=("Rotation_3_Kamran Diba Lab" "OLD__ARCHIVE")
+  # perform_archive_directory "/nfs/turbo/umms-kdiba/Pho/" "${directories_to_backup[@]}"
+
+  # directories_to_backup=("_BAK_2024-10-01")
+  # perform_archive_directory "/nfs/turbo/umms-kdiba/Data/Output/gen_scripts/" "${directories_to_backup[@]}"
+
+
   # Build the absolute paths
   full_paths_to_directories_to_backup=()
   for dir_name in "${directories_to_backup[@]}"; do
