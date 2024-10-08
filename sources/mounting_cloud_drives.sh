@@ -90,7 +90,8 @@ mount_sshfs_cloud_drive () {
         # If this is macOS, change the sshfs options
         if [ "$os_name" = "Darwin" ]; then
             # sshfs_args="-o ServerAliveInterval=45,ServerAliveCountMax=2,reconnect,allow_other,defer_permissions"
-            sshfs_args="-o reconnect,allow_other,defer_permissions -o ssh_command=\"ssh -o ServerAliveInterval=45 -o ServerAliveCountMax=2\""
+            # sshfs_args="-o reconnect,allow_other,defer_permissions -o ssh_command=\"ssh -o ServerAliveInterval=45 -o ServerAliveCountMax=2\""
+            sshfs_args=""
         fi
 
         # Now run sshfs with the configured arguments
