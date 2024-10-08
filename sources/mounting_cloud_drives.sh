@@ -67,7 +67,7 @@ mount_cloud_drive () {
         return 0
         # echo "The mount point is already mounted: $mount_location"
     else
-        mkdir -p "$mount_location"
+        mkdir -p "$mount_location" 2>/dev/null
         rclone  --vfs-cache-mode writes mount --daemon "$remote" "$mount_location" --log-file="$rclone_deamon_log_file_location" --log-format=pid --network-mode
         # ` --vfs-cache-mode writes` this part caches files to be written locally, allowing your remote to be used/read while a write is occuring
     fi
@@ -81,7 +81,7 @@ mount_sshfs_cloud_drive () {
         return 0
         # echo "The mount point is already mounted: $mount_location"
     else
-        mkdir -p "$mount_location"
+        mkdir -p "$mount_location" 2>/dev/null
         # Check the operating system
         local os_name=$(uname)
 
@@ -155,7 +155,8 @@ mount_greatlakes () {
 
 
 mount_all_cloud_drives () {
-    local CLOUD_BASE_PATH=${1:-"/media/halechr/MAX/cloud"} # Provides a default value if no argument is passed
+    local CLOUD_BASE_PATH=${1:-"/media/halechr/BETAMAX/cloud"} # Provides a default value if no argument is passed
+    # local CLOUD_BASE_PATH=${1:-"/media/halechr/MAX/cloud"} # Provides a default value if no argument is passed
     # Mount Cloud Drives:
     mount_cloud_drive "Diba_Lab_Shared_GDrive:" "${CLOUD_BASE_PATH}/GDrive_Diba_Shared" "${CLOUD_BASE_PATH}/logs/rclone_deamon_GDrive_Diba_Shared.log"
     mount_cloud_drive "Diba_Lab_UMich_Dropbox:" "${CLOUD_BASE_PATH}/Dropbox_Diba_Shared" "${CLOUD_BASE_PATH}/logs/rclone_deamon_Dropbox_Diba_Shared.log"
@@ -171,7 +172,7 @@ mount_all_cloud_drives () {
 }
 
 unmount_all_cloud_drives () {
-    local CLOUD_BASE_PATH=${1:-"/media/halechr/MAX/cloud"} # Provides a default value if no argument is passed
+    local CLOUD_BASE_PATH=${1:-"/media/halechr/BETAMAX/cloud"} # Provides a default value if no argument is passed
     # Unmount Cloud Drives:
     unmount_cloud_drive "${CLOUD_BASE_PATH}/GDrive_Diba_Shared"
     unmount_cloud_drive "${CLOUD_BASE_PATH}/Dropbox_Diba_Shared"

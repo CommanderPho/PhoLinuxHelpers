@@ -9,6 +9,7 @@
 # If you have a mouse with complications or special needs,
 # use the command xev to find what your wheel does.
 #
+# Can be called programmatically like: `"$HOME/repos/PhoLinuxHelpers/sources/external/imwheel_adjust_gui.sh" 6`
 ### see if imwheel config exists, if not create it ###
 if [ ! -f ~/.imwheelrc ]
 then
@@ -26,17 +27,22 @@ EOF
 fi
 ##########################################################
 
-CURRENT_VALUE=$(awk -F 'Button4,' '{print $2}' ~/.imwheelrc)
+# Check if input argument is provided
+if [ "$1" != "" ]; then
+  NEW_VALUE="$1"
+else
+  CURRENT_VALUE=$(awk -F 'Button4,' '{print $2}' ~/.imwheelrc)
+  NEW_VALUE=$(zenity --scale --window-icon=info --ok-label=Apply --title="Wheelies" --text "Mouse wheel speed:" --min-value=1 --max-value=100 --value="$CURRENT_VALUE" --step 1)
 
-NEW_VALUE=$(zenity --scale --window-icon=info --ok-label=Apply --title="Wheelies" --text "Mouse wheel speed:" --min-value=1 --max-value=100 --value="$CURRENT_VALUE" --step 1)
-
-if [ "$NEW_VALUE" == "" ];
-then exit 0
+  if [ "$NEW_VALUE" == "" ]; then
+    exit 0
+  fi
 fi
 
-sed -i "s/\($TARGET_KEY *Button4, *\).*/\1$NEW_VALUE/" ~/.imwheelrc # find the string Button4, and write new value.
-sed -i "s/\($TARGET_KEY *Button5, *\).*/\1$NEW_VALUE/" ~/.imwheelrc # find the string Button5, and write new value.
+# Update ~/.imwheelrc with the new value
+sed -i "s/\(Button4, *\).*/\1$NEW_VALUE/" ~/.imwheelrc
+sed -i "s/\(Button5, *\).*/\1$NEW_VALUE/" ~/.imwheelrc
 
+# Display the updated config and restart imwheel
 cat ~/.imwheelrc
 imwheel -kill
-

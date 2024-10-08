@@ -28,23 +28,20 @@
 # # on GreatLakes, turbo is accessible at:
 # ln -s /nfs/turbo/umms-kdiba/ ~/cloud/turbo
 
-
-module load rclone
-# module load archivetar
 export CLOUD_BASE_PATH="${HOME}/cloud" # for greatlakes
 source "$HOME/repos/PhoLinuxHelpers/sources/mounting_cloud_drives.sh" # /home/halechr/repos/PhoLinuxHelpers
 # mount_all_cloud_drives "$CLOUD_BASE_PATH" # run mount_all_cloud_drives
-# mount_cloud_drive "Diba_Lab_Shared_GDrive:" "${CLOUD_BASE_PATH}/GDrive_Diba_Shared" "${CLOUD_BASE_PATH}/logs/rclone_deamon_GDrive_Diba_Shared.log"
+mount_cloud_drive "Diba_Lab_Shared_GDrive:" "${CLOUD_BASE_PATH}/GDrive_Diba_Shared" "${CLOUD_BASE_PATH}/logs/rclone_deamon_GDrive_Diba_Shared.log"
 mount_cloud_drive "Diba_Lab_UMich_Dropbox:" "${CLOUD_BASE_PATH}/Dropbox_Diba_Shared" "${CLOUD_BASE_PATH}/logs/rclone_deamon_Dropbox_Diba_Shared.log"
 # Personal UMich GDrive
-# mount_cloud_drive "halechr_GDrive:" "${CLOUD_BASE_PATH}/GDrive_Pho_UMich" "${CLOUD_BASE_PATH}/logs/rclone_deamon_GDrive_Pho_UMich.log"
+mount_cloud_drive "halechr_GDrive:" "${CLOUD_BASE_PATH}/GDrive_Pho_UMich" "${CLOUD_BASE_PATH}/logs/rclone_deamon_GDrive_Pho_UMich.log"
 
 # on GreatLakes, turbo is accessible at:
 # ln -s /nfs/turbo/umms-kdiba/ ~/cloud/turbo
-mount_symlinked_drive /nfs/turbo/umms-kdiba/ "${CLOUD_BASE_PATH}/turbo"
+# mount_symlinked_drive /nfs/turbo/umms-kdiba/ ~/cloud/turbo
 # on GreatLakes, DataDen/Locker is accessible at:
 # ln -s /nfs/dataden/umms-dibalab ~/cloud/locker_dataDen
-mount_symlinked_drive /nfs/dataden/umms-dibalab "${CLOUD_BASE_PATH}/locker_dataDen"
+# mount_symlinked_drive /nfs/dataden/umms-dibalab ~/cloud/locker_dataDen
 
 
 # source "$HOME/repos/PhoLinuxHelpers/sources/greatlakes_Helpers/greatlakes_MOUNT.sh"

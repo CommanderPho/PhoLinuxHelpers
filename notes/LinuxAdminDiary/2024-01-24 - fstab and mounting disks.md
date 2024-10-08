@@ -3,7 +3,28 @@
 `sudo chown -R halechr:umhs_users gor01/`
 
 
+```bash
+sudo chown -R halechr:umhs_users /media/halechr/MAX/
+sudo chown -R halechr:umhs_users /media/halechr/BETAMAX/
 
+## Skip the timeshift and other permissions sensitive directories
+sudo chown -R halechr:umhs_users /media/halechr/MAX/Data/
+sudo chown -R halechr:umhs_users /media/halechr/MAX/cloud/
+sudo chown -R halechr:umhs_users /media/halechr/MAX/Personal/
+sudo chown -R halechr:umhs_users /media/halechr/MAX/Projects/
+sudo chown -R halechr:umhs_users /media/halechr/MAX/SlowSwap/
+sudo chown -R halechr:umhs_users /media/halechr/MAX/VMs/
+
+sudo chown -R halechr:umhs_users /media/halechr/MAX/tmp/
+sudo chown -R halechr:umhs_users /media/halechr/MAX/.*
+
+rm -r /tmp/
+
+sudo chown halechr:umhs_users /media/halechr/MAX/
+
+sudo chown halechr:umhs_users /media/halechr/BETAMAX
+sudo chown -R halechr:umhs_users /media/halechr/BETAMAX/Data/
+```
 
 
 # FStab Settup
@@ -98,3 +119,50 @@ tmpfs                   /dev/shm        tmpfs   defaults,nodev,nosuid,noexec  0 
 
 
 /dev/sdc3: LABEL="FedoraSSD" UUID="8d738d05-b51b-46b0-9cb8-3319de2be30f" UUID_SUB="1d23e8d1-b795-43b2-b0bd-c822c1fbeb14" TYPE="btrfs" PARTUUID="d51748ce-d2da-42b4-93e9-ddd6d2ff8084"
+
+# 2024-06-05  Ubuntu
+```
+[root@RDLU0039 ~]# blkid
+/dev/mapper/vg0-homevol: UUID="0d4c9892-97e5-466f-8194-a3ed568b376a" BLOCK_SIZE="4096" TYPE="ext4"
+/dev/nvme0n1p3: UUID="Bc4i4d-YU7N-yTUn-1yWw-6HQ4-6LcE-Awf5k3" TYPE="LVM2_member" PARTUUID="f0c7e95d-95ed-4f3d-93cd-281060f9ba42"
+/dev/nvme0n1p1: UUID="9462-8F27" BLOCK_SIZE="512" TYPE="vfat" PARTUUID="4a719091-2609-471a-a442-05dba9151cc0"
+/dev/nvme0n1p2: UUID="e9cebfc5-4b22-4227-8dea-0c5cab7a8a86" BLOCK_SIZE="4096" TYPE="ext4" PARTUUID="0cdd11fb-4f90-43bf-a1e6-470e371da187"
+/dev/mapper/vg0-swapvol: UUID="9265889d-d345-4a19-a01a-bf9dd504eb9b" TYPE="swap"
+/dev/sdb1: LABEL="MAX" UUID="655c1eb8-c299-46d7-a4a0-59578491d804" BLOCK_SIZE="4096" TYPE="ext4" PARTUUID="6efd1cdd-82d3-4c38-aded-97042c77e407"
+/dev/mapper/vg0-tmpvol: UUID="57d254ef-80a7-43de-8a82-61a35bd8b647" BLOCK_SIZE="4096" TYPE="ext4"
+/dev/mapper/vg0-varlogauditvol: UUID="8b7542a3-636f-446f-96e0-047eec6a528c" BLOCK_SIZE="4096" TYPE="ext4"
+/dev/mapper/vg0-varvol: UUID="910e60c5-49ca-4303-8742-a0aedf6234e7" BLOCK_SIZE="4096" TYPE="ext4"
+/dev/mapper/vg0-rootvol: UUID="fd7dc5d0-b795-410c-8837-e123b1e35d9c" BLOCK_SIZE="4096" TYPE="ext4"
+/dev/mapper/vg0-vartmpvol: UUID="dd7487db-c9ea-493f-920a-28e0248ee0e8" BLOCK_SIZE="4096" TYPE="ext4"
+/dev/sda1: LABEL="BETAMAX" UUID="acda4d22-a98d-45ed-9900-ba558ff39b6b" UUID_SUB="6fc36168-d691-40db-80cd-304495a7d77a" BLOCK_SIZE="4096" TYPE="btrfs" PARTUUID="7f4de437-8e65-da43-9d21-950dbcc63ce2"
+/dev/mapper/vg0-appvol: UUID="f2316726-c854-4474-843a-1a335178536e" BLOCK_SIZE="4096" TYPE="ext4"
+/dev/mapper/vg0-varlogvol: UUID="7d934058-ebee-47f2-8a8f-7d756b433b1e" BLOCK_SIZE="4096" TYPE="ext4"
+
+/dev/disk/by-uuid/655c1eb8-c299-46d7-a4a0-59578491d804   /media/halechr/MAX       auto    nosuid,nodev,nofail,x-gvfs-show,x-gvfs-name=MAX                                     0 0 
+/dev/disk/by-uuid/FC74-0E8A /media/halechr/HugePort auto nosuid,nodev,nofail,x-gvfs-show,x-gvfs-name=HugePort 0 0
+
+
+/dev/loop1: TYPE="squashfs"
+/dev/loop19: TYPE="squashfs"
+/dev/loop17: TYPE="squashfs"
+/dev/loop8: TYPE="squashfs"
+/dev/loop15: TYPE="squashfs"
+/dev/loop6: TYPE="squashfs"
+/dev/loop13: TYPE="squashfs"
+/dev/loop4: TYPE="squashfs"
+/dev/loop21: TYPE="squashfs"
+/dev/loop11: TYPE="squashfs"
+/dev/loop2: TYPE="squashfs"
+/dev/loop0: TYPE="squashfs"
+/dev/loop18: TYPE="squashfs"
+/dev/loop9: TYPE="squashfs"
+/dev/loop16: TYPE="squashfs"
+/dev/loop7: TYPE="squashfs"
+/dev/loop14: TYPE="squashfs"
+/dev/loop5: TYPE="squashfs"
+/dev/loop22: TYPE="squashfs"
+/dev/loop12: TYPE="squashfs"
+/dev/loop3: TYPE="squashfs"
+/dev/loop20: TYPE="squashfs"
+/dev/loop10: TYPE="squashfs"
+```
