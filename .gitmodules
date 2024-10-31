@@ -1,3 +1,6 @@
 [submodule "sources/external/transfuse"]
 	path = sources/external/transfuse
 	url = https://gitlab.com/CommanderPho1/transfuse.git
+[submodule "sources/external/git-filter-repo"]
+	path = sources/external/git-filter-repo
+	url = https://github.com/newren/git-filter-repo.git
