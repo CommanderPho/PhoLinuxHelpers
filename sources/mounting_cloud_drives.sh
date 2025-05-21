@@ -122,8 +122,6 @@ unmount_cloud_drive () {
 }
 
 
-
-
 # Shorcuts for remounting individual cloud drives:
 remount_cloud_drive_PhoPersonalDropbox () {
     local CLOUD_BASE_PATH=${1:-"/media/halechr/MAX/cloud"} # Provides a default value if no argument is passed
