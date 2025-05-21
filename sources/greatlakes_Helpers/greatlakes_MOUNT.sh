@@ -33,6 +33,23 @@ module load rclone
 # module load archivetar
 export CLOUD_BASE_PATH="${HOME}/cloud" # for greatlakes
 source "$HOME/repos/PhoLinuxHelpers/sources/mounting_cloud_drives.sh" # /home/halechr/repos/PhoLinuxHelpers
+
+
+mount_locker_dataDen_GL () {
+    local CLOUD_BASE_PATH=${1:-"${HOME}/cloud"} # Provides a default value if no argument is passed
+    # local CLOUD_BASE_PATH=${1:-"/media/halechr/MAX/cloud"} # Provides a default value if no argument is passed
+	# unmount_cloud_drive "${CLOUD_BASE_PATH}/locker_dataDen"
+    # Locker DataDen via Greatlakes:
+    # mount_sshfs_cloud_drive "halechr@greatlakes-oncampus.arc-ts.umich.edu:/nfs/dataden/umms-dibalab" "${CLOUD_SSD_BASE_PATH}/locker_dataDen"
+	mount_cloud_drive "DataDenOnCampus:" "${CLOUD_BASE_PATH}/locker_dataDen" "${CLOUD_BASE_PATH}/logs/rclone_deamon_DataDenOnCampus.log"
+    echo locker_dataDen mounted at "${CLOUD_BASE_PATH}/locker_dataDen via RClone"
+    return 0
+}
+
+
+mount_locker_dataDen_GL
+
+
 # mount_all_cloud_drives "$CLOUD_BASE_PATH" # run mount_all_cloud_drives
 # mount_cloud_drive "Diba_Lab_Shared_GDrive:" "${CLOUD_BASE_PATH}/GDrive_Diba_Shared" "${CLOUD_BASE_PATH}/logs/rclone_deamon_GDrive_Diba_Shared.log"
 mount_cloud_drive "Diba_Lab_UMich_Dropbox:" "${CLOUD_BASE_PATH}/Dropbox_Diba_Shared" "${CLOUD_BASE_PATH}/logs/rclone_deamon_Dropbox_Diba_Shared.log"

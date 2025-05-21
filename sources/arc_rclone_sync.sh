@@ -4,14 +4,14 @@
 # rclone --config /home/brockp/.config/rclone/rclone.conf sync --disable-http2 --transfers=32 --drive-auth-owner-only -P --checkers=32 --log-file=brockp.log deil-archive:/ . 
 
 RCLONE=/usr/bin/rclone
-RCONFIG=/home/brockp/.config/rclone/rclone.conf
+RCONFIG=/home/halechr/.config/rclone/rclone.conf
 
 # use remote name as both mount path and arg to mount
 # rclone listremotes
 
 cloud_mount() {
 REMOTE=$1
-MPATH=/home/brockp/mnt/$REMOTE/
+MPATH=/home/halechr/mnt/$REMOTE/
 if mount | grep $REMOTE > /dev/null; then
 echo "$REMOTE already mounted skipping"
 else
