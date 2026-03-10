@@ -38,6 +38,41 @@ function ssh_supercomputer_tunnel () {
 
 # ssh_supercomputer_tunnel gl3142 13809
 
+# OnDemand "native VNC" (greatlakes.arc-ts.umich.edu, remote port 5901). Distinct from ssh_supercomputer_tunnel (gl-campus-login, 5902).
+function ondemand_vnc_tunnel () {
+	local local_port node_name vnc_password pasted
+	pasted="${1:-}"
+	if [[ -n "$pasted" && "$pasted" =~ -L[[:space:]]+([0-9]+):(gl[0-9]+)\.arc-ts\.umich\.edu:5901 ]]; then
+		local_port="${BASH_REMATCH[1]}"
+		node_name="${BASH_REMATCH[2]}"
+		vnc_password="${2:-}"
+	else
+		local_port="${1:-}"
+		node_name="${2:-}"
+		vnc_password="${3:-}"
+	fi
+	if [[ -z $local_port ]]; then
+		read -p "Enter local_port (e.g. 24104): " local_port
+	fi
+	if [[ -z $node_name ]]; then
+		read -p "Enter great_lakes_node_name (e.g. gl3467): " node_name
+	fi
+	ssh -f -N -L "${local_port}:${node_name}.arc-ts.umich.edu:5901" halechr@greatlakes.arc-ts.umich.edu
+	if [[ -n "$vnc_password" ]]; then
+		echo "VNC password (paste into client): $vnc_password"
+	fi
+	if [[ -n "${PHO_VNC_VIEWER:-}" ]]; then
+		$PHO_VNC_VIEWER "localhost::${local_port}"
+	elif command -v vncviewer &>/dev/null; then
+		vncviewer "localhost::${local_port}"
+	elif command -v remmina &>/dev/null; then
+		remmina -c "vnc://localhost:${local_port}"
+	else
+		echo "Connect VNC client to localhost:${local_port}"
+	fi
+}
+
+
 function ssh_lab_workstation () {
     ssh halechr@RDLU0039.ddns.med.umich.edu
     # rdlu0039.ddns.med.umich.edu
