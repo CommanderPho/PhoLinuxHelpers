@@ -8,6 +8,14 @@ make
 sudo make install
 sudo systemctl restart vmware.service
 
+## 2025-04-10 after upgrade
+```
+halechr@RDLU0039:/usr/local/share/applications$ vmware --version
+VMware Workstation 17.5.2 build-23775571
+
+git checkout workstation-17.5.2
+
+```
 
 # References
 https://github.com/mkubecek/vmware-host-modules/tree/workstation-17.0.2

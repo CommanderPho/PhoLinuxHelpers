@@ -113,3 +113,5 @@ Install: libnvidia-common-560:amd64 (560.35.05-0ubuntu1, automatic), nvidia-firm
 Remove: libnvidia-compute-555:amd64 (555.42.06-0ubuntu1)
 End-Date: 2025-04-04  12:25:22
 ```
+
+## upgrade seemingly worked!
