@@ -7,3 +7,16 @@ dependencies = [
     "pandas>=3.0.3",
     "plotly>=6.9.0",
 ]
+
+[project.scripts]
+generate_treemap = "generate_treemap:main"
+
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+py-modules = ["generate_treemap"]
+
+[tool.setuptools.package-dir]
+"" = "sources"
