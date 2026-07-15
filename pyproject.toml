@@ -1,0 +1,22 @@
+[project]
+name = "pholinuxhelpers"
+version = "0.1.0"
+requires-python = ">=3.9"
+dependencies = [
+    "numpy",
+    "pandas",
+    "plotly",
+]
+
+[project.scripts]
+generate_treemap = "generate_treemap:main"
+
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+py-modules = ["generate_treemap"]
+
+[tool.setuptools.package-dir]
+"" = "sources"

@@ -12,6 +12,9 @@ mirror_turbo_data_to_scratch KDIBA/gor01/one --dry-run
 
 # /media/halechr/BETAMAX1/Data/DANDI/SingleDayWTrackLearning/000978/
 
+
+uv run generate_treemap ~/du_2026_07-14_turbo_HierarchySizes.txt
+
 ```
 
 ## Great Lakes OnDemand native VNC
