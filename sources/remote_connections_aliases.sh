@@ -57,6 +57,10 @@ function ondemand_vnc_tunnel () {
 	if [[ -z $node_name ]]; then
 		read -p "Enter great_lakes_node_name (e.g. gl3467): " node_name
 	fi
+	if [[ -z $local_port || -z $node_name ]]; then
+		echo "ondemand_vnc_tunnel: need non-empty local_port and great_lakes_node_name (e.g. 24104 gl3467). Aborting."
+		return 1
+	fi
 	ssh -f -N -L "${local_port}:${node_name}.arc-ts.umich.edu:5901" halechr@greatlakes.arc-ts.umich.edu
 	if [[ -n "$vnc_password" ]]; then
 		echo "VNC password (paste into client): $vnc_password"
